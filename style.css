@@ -1,0 +1,26 @@
+.header {
+  background-color: #3d96d6;
+  text-align: center;
+}
+
+.navbar {
+  display: block table;
+  margin: 0 auto;
+}
+
+.navbar > span {
+  padding: 0 5px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1, h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
