@@ -2,13 +2,11 @@
   background-color: #3998dd;
   padding: 12px;
   text-align: center;
-  max-height: 80px;
-
 }
 
 #header-pic {
-  max-height: inherit;
-  display: inline-block; 
+  max-height: 80px;
+  display: inline; 
   border-radius: 50%;
   vertical-align: top;
 }
@@ -29,7 +27,7 @@
   padding: 0 5px;
 }
 
-.about-content {
+.page-content {
   max-width: 800px;
   margin: auto;
 }
