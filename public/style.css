@@ -13,7 +13,7 @@
 
 #header-text {
   display: inline-block;
-  padding: 0 18px;
+  padding: 0 1.5% ;/*18px;*/ /*Seeing if adjusting this helps for mobile at all*/
 
 }
 
@@ -25,6 +25,10 @@
 
 .navbar > span {
   padding: 0 5px;
+}
+
+#side-menu {
+  height: 100%;
 }
 
 .page-content {
