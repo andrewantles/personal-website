@@ -1,11 +1,28 @@
 .header {
-  background-color: #3d96d6;
+  background-color: #3998dd;
+  padding: 12px;
   text-align: center;
+  max-height: 80px;
+
+}
+
+#header-pic {
+  max-height: inherit;
+  display: inline-block; 
+  border-radius: 50%;
+  vertical-align: top;
+}
+
+#header-text {
+  display: inline-block;
+  padding: 0 18px;
+
 }
 
 .navbar {
   display: block table;
   margin: 0 auto;
+  padding: 20px 0 0 0;
 }
 
 .navbar > span {
@@ -21,6 +38,6 @@ h1, h2 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
-p {
+p, a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
