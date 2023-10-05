@@ -3,7 +3,7 @@
 function buildHeader () {
   header = document.getElementById("header");
   let headerText = document.createElement("h1");
-  headerText.innerHTML = "Andrew Antles' Personal Site";
+  headerText.innerHTML = "AndrewAntles.Net";
   header.appendChild(headerText);
 }
 

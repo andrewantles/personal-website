@@ -1,9 +1,5 @@
 let pages = [
   {
-    title: "Home",
-    link: "index"
-  }, 
-  {
     title: "Blog",
     link: "blog"
   }, 
