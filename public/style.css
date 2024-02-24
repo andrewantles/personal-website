@@ -6,15 +6,18 @@
 
 #header-pic {
   max-height: 80px;
+  height: 80px;
+  width: 80px;
   display: inline; 
   border-radius: 50%;
   vertical-align: top;
+  object-fit: cover;
 }
 
 #header-text {
   display: inline-block;
-  padding: 0 1.5% ;/*18px;*/ /*Seeing if adjusting this helps for mobile at all*/
-
+  padding: 0 2.5%;/*18px;*/ /*Seeing if adjusting this helps for mobile at all*/
+  margin: center 0;
 }
 
 .navbar {
@@ -42,4 +45,11 @@ h1, h2 {
 
 p, a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (max-width: 300px) {
+  #header-text {
+    font-size: 24px;
+    margin-bottom: 11px;
+  }
 }
