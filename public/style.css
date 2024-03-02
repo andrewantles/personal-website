@@ -16,22 +16,29 @@
 
 #header-text {
   display: inline-block;
-  padding: 0 2.5%;/*18px;*/ /*Seeing if adjusting this helps for mobile at all*/
+  padding: 0 2.5%;
   margin: center 0;
 }
 
-.navbar {
+.menu-container {
   display: block table;
   margin: 0 auto;
-  padding: 20px 0 0 0;
+  padding: 20px 0;
+  background-color: #f0f0f0;
+  width: 100%;
+  text-align: center;
 }
 
-.navbar > span {
+.menu-container #blog-menu {
+  padding-top: 20px;
+}
+
+.menu > span {
   padding: 0 5px;
 }
 
-#side-menu {
-  height: 100%;
+body {
+  background-color: #fcfcfc;
 }
 
 .page-content {
@@ -39,12 +46,31 @@
   margin: auto;
 }
 
-h1, h2 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+h1, h2, h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: #333;
 }
 
 p, a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #353535;
+}
+
+img {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+pre {
+  background-color: #f0f0f0; 
+  padding: 10px; 
+  border-radius: 4px; 
+  overflow-x: auto; 
+  font-family: Consolas, monospace; 
+  font-size: 14px; 
+  line-height: 1.5; 
 }
 
 @media only screen and (max-width: 300px) {

@@ -1,25 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>AndrewAntles.Net</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../public/style.css">
-  </head>
-  <body>
-    <div id="header" class="header"></div>
-    <script src="../components/header.js"></script>
-
-    <div id="menu-container" class="menu-container">
-      <div id="navbar" class="menu"></div>
-      <script src="../components/navbar.js"></script>
-
-      <div id="blog-menu" class="menu"></div>
-      <script src="../components/blog-menu.js"></script>
-    </div>
-    
-    <main id="post-container" class="page-content">
-        <article id="blog-post" class="blog-post">
           <h2>Machine Learning Crash Course, Let's Play</h2>
           <p>I've been working through the <a href="https://developers.google.com/machine-learning/crash-course">Machine Learning Crash Course</a> from Google. I'm really happy with it, despite not generally trusting Google or its products. In fact, there are several resources in this ML section of their Developer's website that look really interesting to go through. Some more general guidance pieces, and some shorter, more <a href="https://developers.google.com/machine-learning/advanced-courses">hands-on courses</a> that dive deeper into specific algorithms. Anyway, I thought I'd write a bit about my experience with it here.</p>
 
@@ -68,9 +46,3 @@ print(my_list) # Prints [99]
           <p>Thanks for reading!</p>
 
           <p><em>Andrew Antles</em></p>
-
-        </article>
-    </main>
-
-  </body>
-</html>
