@@ -124,6 +124,10 @@ h1, h2, h3 {
   margin-bottom: 0.5em;
 }
 
+h3.mono {
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+}
+
 p {
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   color: #353535;
