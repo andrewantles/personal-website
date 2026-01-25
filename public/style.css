@@ -106,20 +106,31 @@
 body {
   background-color: #fcfcfc;
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 .page-content {
-  max-width: 800px;
+  max-width: 720px;
   margin: auto;
+  padding: 1.5rem 1.25rem;
 }
 
 h1, h2, h3 {
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
   color: #333;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-p, a {
+p {
   font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  color: #353535;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+a {
   color: #353535;
 }
 
