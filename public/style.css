@@ -66,24 +66,25 @@
 
 .header {
   background-color: #3998dd;
-  padding: 12px;
-  text-align: center;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 #header-pic {
-  max-height: 80px;
-  height: 80px;
-  width: 80px;
-  display: inline; 
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  vertical-align: top;
   object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  margin: 0;
 }
 
 #header-text {
-  display: inline-block;
-  padding: 0 2.5%;
-  margin: center 0;
+  margin: 0;
 }
 
 .menu-container {
@@ -155,9 +156,14 @@ code {
   padding: 2px 4px;
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    padding: 1.25rem 1rem;
+  }
+
   #header-text {
-    font-size: 24px;
-    margin-bottom: 11px;
+    font-size: 1.75rem;
+    text-align: center;
   }
 }
