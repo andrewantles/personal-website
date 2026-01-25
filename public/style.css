@@ -1,3 +1,69 @@
+/* Atkinson Hyperlegible Next - Regular text font */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible Mono - Code/console font */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono';
+  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono';
+  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono';
+  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .header {
   background-color: #3998dd;
   padding: 12px;
@@ -39,6 +105,7 @@
 
 body {
   background-color: #fcfcfc;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
 }
 
 .page-content {
@@ -47,12 +114,12 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
   color: #333;
 }
 
 p, a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
   color: #353535;
 }
 
@@ -63,14 +130,18 @@ img {
   margin: 0 auto;
 }
 
-pre {
-  background-color: #f0f0f0; 
-  padding: 10px; 
-  border-radius: 4px; 
-  overflow-x: auto; 
-  font-family: Consolas, monospace; 
-  font-size: 14px; 
-  line-height: 1.5; 
+pre, code, kbd, samp {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+code {
+  padding: 2px 4px;
 }
 
 @media only screen and (max-width: 300px) {
