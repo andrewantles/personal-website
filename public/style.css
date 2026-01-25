@@ -146,6 +146,27 @@ img {
   margin: 0 auto;
 }
 
+/* Social/external link icons - inline display without blog image styling */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links img {
+  border: none;
+  display: inline;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+}
+
 pre, code, kbd, samp {
   background-color: #f0f0f0;
   padding: 10px;
