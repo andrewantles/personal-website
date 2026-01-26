@@ -1,23 +1,90 @@
+/* Atkinson Hyperlegible Next - Regular text font */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Next';
+  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Atkinson Hyperlegible Mono - Code/console font */
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono';
+  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono';
+  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-RegularItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Atkinson Hyperlegible Mono';
+  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .header {
   background-color: #3998dd;
-  padding: 12px;
-  text-align: center;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
 }
 
 #header-pic {
-  max-height: 80px;
-  height: 80px;
-  width: 80px;
-  display: inline; 
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  vertical-align: top;
   object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.75);
+  margin: 0;
 }
 
 #header-text {
-  display: inline-block;
-  padding: 0 2.5%;
-  margin: center 0;
+  margin: 0;
 }
 
 .menu-container {
@@ -39,20 +106,36 @@
 
 body {
   background-color: #fcfcfc;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 .page-content {
-  max-width: 800px;
+  max-width: 720px;
   margin: auto;
+  padding: 1.5rem 1.25rem;
 }
 
 h1, h2, h3 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
   color: #333;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
-p, a {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+h3.mono {
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+}
+
+p {
+  font-family: 'Atkinson Hyperlegible Next', sans-serif;
+  color: #353535;
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+
+a {
   color: #353535;
 }
 
@@ -63,19 +146,71 @@ img {
   margin: 0 auto;
 }
 
-pre {
-  background-color: #f0f0f0; 
-  padding: 10px; 
-  border-radius: 4px; 
-  overflow-x: auto; 
-  font-family: Consolas, monospace; 
-  font-size: 14px; 
-  line-height: 1.5; 
+/* Social/external link icons - inline display without blog image styling */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0;
 }
 
-@media only screen and (max-width: 300px) {
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links img {
+  border: none;
+  display: inline;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+}
+
+/* Footer */
+.footer {
+  background-color: #f0f0f0;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer #copyright {
+  margin-bottom: 0.5rem;
+}
+
+.footer .social-links {
+  justify-content: center;
+  margin: 0.5rem 0 0 0;
+}
+
+.footer .social-links img {
+  width: 32px;
+  height: 32px;
+}
+
+pre, code, kbd, samp {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+  font-family: 'Atkinson Hyperlegible Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+code {
+  padding: 2px 4px;
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    flex-direction: column;
+    padding: 1.25rem 1rem;
+  }
+
   #header-text {
-    font-size: 24px;
-    margin-bottom: 11px;
+    font-size: 1.75rem;
+    text-align: center;
   }
 }
