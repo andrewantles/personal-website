@@ -167,6 +167,28 @@ img {
   height: 48px;
 }
 
+/* Footer */
+.footer {
+  background-color: #f0f0f0;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.footer #copyright {
+  margin-bottom: 0.5rem;
+}
+
+.footer .social-links {
+  justify-content: center;
+  margin: 0.5rem 0 0 0;
+}
+
+.footer .social-links img {
+  width: 32px;
+  height: 32px;
+}
+
 pre, code, kbd, samp {
   background-color: #f0f0f0;
   padding: 10px;
