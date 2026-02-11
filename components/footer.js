@@ -5,7 +5,7 @@ function buildFooter() {
   // Copyright paragraph with dynamic year
   const copyright = document.createElement("p");
   copyright.setAttribute("id", "copyright");
-  copyright.innerHTML = `&copy; ${currentYear} AndrewAntles.net. All rights reserved.`;
+  copyright.innerHTML = `&copy; ${currentYear} AndrewAntles.net`;
 
   // Social links nav
   const socialNav = document.createElement("nav");

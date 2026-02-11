@@ -168,7 +168,6 @@ img {
   height: 48px;
 }
 
-/* Footer */
 .footer {
   background-color: #f0f0f0;
   padding: 1.5rem 1rem;
@@ -178,6 +177,7 @@ img {
 
 .footer #copyright {
   margin-bottom: 0.5rem;
+  font-size: 0.75em;
 }
 
 .footer .social-links {
