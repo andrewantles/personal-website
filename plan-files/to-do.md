@@ -1,4 +1,5 @@
 1. I need a non-javascript-enabled version of the website...
+   1. See recent no-js.md plan file. Talks about leveraging local build scripts to make the site more accessible in addition to not requiring JS.
    
 1. I want a dark-mode toggle in the top-right of the header
 
@@ -11,3 +12,5 @@
    1. Bot mitigation, robots.txt
    1. Markdown parser/post deployment
    1. SPA application consideration
+
+1. I'd like to understand what seems to be a default GitHub Action that appears to come along standard with GitHub Pages usage. It would be interesting to understand what exactly this is doing and how it works. (Seems to use Jekyll.)
