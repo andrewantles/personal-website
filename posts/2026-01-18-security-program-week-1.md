@@ -1,3 +1,9 @@
+---
+title: "CIS Controls Personal Security Program - Week 1"
+date: 2026-01-18
+summary: "Program structure selection and CIS Controls review."
+---
+
 # Project Mission - north star
 Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. 
 

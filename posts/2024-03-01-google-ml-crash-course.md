@@ -1,3 +1,9 @@
+---
+title: "Machine Learning Crash Course, Let's Play"
+date: 2024-03-01
+summary: "Diving into the Machine Learning Crash Course from Google."
+---
+
           <h2>Machine Learning Crash Course, Let's Play</h2>
           <p>I've been working through the <a href="https://developers.google.com/machine-learning/crash-course">Machine Learning Crash Course</a> from Google. I'm really happy with it, despite not generally trusting Google or its products. In fact, there are several resources in this ML section of their Developer's website that look really interesting to go through. Some more general guidance pieces, and some shorter, more <a href="https://developers.google.com/machine-learning/advanced-courses">hands-on courses</a> that dive deeper into specific algorithms. Anyway, I thought I'd write a bit about my experience with it here.</p>
 
