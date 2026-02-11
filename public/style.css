@@ -1,7 +1,7 @@
 /* Atkinson Hyperlegible Next - Regular text font */
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-RegularItalic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -17,7 +17,7 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-BoldItalic.woff2') format('woff2');
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -33,7 +33,7 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Next';
-  src: url('/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-next-woff2/AtkinsonHyperlegibleNext-SemiBold.woff2') format('woff2');
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -42,7 +42,7 @@
 /* Atkinson Hyperlegible Mono - Code/console font */
 @font-face {
   font-family: 'Atkinson Hyperlegible Mono';
-  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Regular.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -50,7 +50,7 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Mono';
-  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-RegularItalic.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-RegularItalic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -58,7 +58,7 @@
 
 @font-face {
   font-family: 'Atkinson Hyperlegible Mono';
-  src: url('/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Bold.woff2') format('woff2');
+  src: url('/public/fonts/atkinson-hyperlegible-mono-woff2/AtkinsonHyperlegibleMono-Bold.woff2') format('woff2');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -85,6 +85,7 @@
 
 #header-text {
   margin: 0;
+  font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
 }
 
 .menu-container {
@@ -167,7 +168,6 @@ img {
   height: 48px;
 }
 
-/* Footer */
 .footer {
   background-color: #f0f0f0;
   padding: 1.5rem 1rem;
@@ -177,6 +177,7 @@ img {
 
 .footer #copyright {
   margin-bottom: 0.5rem;
+  font-size: 0.75em;
 }
 
 .footer .social-links {
@@ -210,7 +211,6 @@ code {
   }
 
   #header-text {
-    font-size: 1.75rem;
     text-align: center;
   }
 }
