@@ -1,11 +1,5 @@
-1. Remove "All Rights Reserved" from the footer.
-   1. Not seeing this on other blogs: Is this already implied?
-   
 1. I need a non-javascript-enabled version of the website...
    
-1. I want the header text to continually scale down based on viewport width.
-   1. Right now it drops in size twice, and in between drops, it hangs off the side of the viewport.
-
 1. I want a dark-mode toggle in the top-right of the header
 
 1. Re: Blog navigation: Right-side vertical menu
