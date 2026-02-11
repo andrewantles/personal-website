@@ -8,6 +8,8 @@
    1. Tagging cloud, or at least clickable links that return list of blogs with tag, sorted by most recent
    1. Year > Month (no. posts) nav
 
+1. There's some sort of issue with using embed tags for my resume PDF. Looks like it doesn't render on Android phones. I need to look into this and find a more inclusive solution.
+
 1. See other .md files for additional plans that I asked my coding assistant to come up with.
    1. Bot mitigation, robots.txt
    1. Markdown parser/post deployment
