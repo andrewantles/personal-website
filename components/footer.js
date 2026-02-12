@@ -19,7 +19,7 @@ function buildFooter() {
   linkedInLink.setAttribute("aria-label", "LinkedIn profile");
 
   const linkedInImg = document.createElement("img");
-  linkedInImg.setAttribute("src", "../public/company-logos/linkedin/In-Blue-128.png");
+  linkedInImg.setAttribute("src", "../public/img/company-logos/linkedin/In-Blue-128.png");
   linkedInImg.setAttribute("alt", "LinkedIn Logo");
   linkedInLink.appendChild(linkedInImg);
 
@@ -30,7 +30,7 @@ function buildFooter() {
   githubLink.setAttribute("aria-label", "GitHub profile");
 
   const githubImg = document.createElement("img");
-  githubImg.setAttribute("src", "../public/company-logos/github/github-mark.png");
+  githubImg.setAttribute("src", "../public/img/company-logos/github/github-mark.png");
   githubImg.setAttribute("alt", "GitHub Logo");
   githubLink.appendChild(githubImg);
 

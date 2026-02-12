@@ -1,7 +1,7 @@
 let pages = [
   {
     title: "Blog",
-    link: "blog"
+    link: "blog-one-post-google-machine-learning"
   }, 
   {
     title: "Resume",
