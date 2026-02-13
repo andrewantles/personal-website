@@ -1,3 +1,5 @@
+1. `./plan-files/blog-build-code-review.md` - need to finalize these findings before first build
+
 1. I need a non-javascript-enabled version of the website...
    1. See recent no-js.md plan file. Talks about leveraging local build scripts to make the site more accessible in addition to not requiring JS.
    
@@ -13,6 +15,7 @@
 1. My `build.py` build script overwrites everything every time. It would be nice to store hashes of source files, and only perform updates if the source hashes have changed. Cleaner, faster. 
 
 1. See other .md files for additional plans that I asked my coding assistant to come up with.
+   1. style-considerations.md
    1. Bot mitigation, robots.txt
    1. Markdown parser/post deployment
    1. SPA application consideration
