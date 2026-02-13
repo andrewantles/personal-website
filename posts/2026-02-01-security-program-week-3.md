@@ -65,3 +65,7 @@ The other step I was able to take this was to confirm SSH access. During the OS 
 ## Wrap Up
 
 Pretty good for just having a few hours to throw at the project. I'll be taking a break next week to coach at the [Spokane Cyber Cup](https://spokanectf.github.io/). It's a great event that my friend, [Maxwell Dulin](https://maxwelldulin.com/Blog), puts on every year. Teams from high schools and colleges all over the region come to compete, but for Maxwell his main goal with the event is to share knowledge with exposure to cyber security concepts and challenges. I'm lucky enough to be able to coach at the event, and I just want to say that I think it's super cool that Maxwell goes out of his way to bring this event to Spokane, a city with a lot of promise and sometimes a little less exposure to cyber security education events like this one. Thank you, Maxwell!
+
+Thanks for reading,
+
+*Andrew Antles*

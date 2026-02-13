@@ -92,3 +92,5 @@ Additionally, I gave it a description of my devices, a rough layout of my networ
 Other interesting things I spent time thinking about and learning about this week were AI data centers and Google's TPU chips. I also spent some time watching Andrej Karpathy's [Youtube lecture](https://www.youtube.com/watch?v=kCc8FmEb1nY&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=7) about how to build ChatGPT from first principles based on the famous and foundational [*Attention is All You Need*](https://arxiv.org/abs/1706.03762) paper. (Karpathy video link in full course playlist)
 
 Until next time!
+
+*Andrew Antles*
