@@ -40,11 +40,11 @@ print(my_list) # Prints [99]
 
 <p>What is so funny to me is that immediately after I ran into this. This was updated and fixed in the original notebook:</p>
 
-<p><img src="../posts/2024-03-01-google-ml-crash-course/revision-history.png" alt="Version history of the private Colab notebook showing an update two days ago"></p>
+<p><img src="./2024-03-01-google-ml-crash-course/revision-history.png" alt="Version history of the private Colab notebook showing an update two days ago"></p>
 
 <p>Here's <a href="https://github.com/google/eng-edu/commit/3c0f5037331cbc937a5edda7efeb0b63d7f80695">the link</a> to the GitHub commit associated with this change:</p>
 
-<p><img src="../posts/2024-03-01-google-ml-crash-course/commit.png" alt="Screenshot of the commit associated to the above change"></p>
+<p><img src="../2024-03-01-google-ml-crash-course/commit.png" alt="Screenshot of the commit associated to the above change"></p>
 
 <p>I found this validating that I had discovered the correct fix to this issue, but also a little unnerving. Does Google really have such good monitoring and capability to execute that almost immediately after this error fired they were able to allocate a resource to address it? O_o Unlikely, but would be such a strange coincidence on the timing otherwise...</p>
 
