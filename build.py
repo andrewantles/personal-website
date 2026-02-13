@@ -113,6 +113,8 @@ def copy_post_images():
     Any subdirectory in /posts/ is treated as an image directory and copied
     in its entirety. Existing copies are replaced to keep things fresh.
     """
+    # pathlib.mkdir args: `parents=True` creates parents if not exist; 
+    #   `exist_ok=True` does not raise error for existing dir
     IMG_DEST.mkdir(parents=True, exist_ok=True)
     for item in POSTS_DIR.iterdir():
         if item.is_dir():
@@ -167,6 +169,8 @@ def build_posts(components):
     """Convert markdown posts to HTML and generate the blog listing page."""
     post_template = (TEMPLATES_DIR / "post.html").read_text()
     listing_template = (TEMPLATES_DIR / "blog.html").read_text()
+    # pathlib.mkdir args: `parents=True` creates parents if not exist; 
+    #   `exist_ok=True` does not raise error for existing dir
     BLOG_DIR.mkdir(parents=True, exist_ok=True)
 
     posts_meta = []
@@ -218,7 +222,12 @@ def build_posts(components):
         page = inject_components(page, components)
         page = replace_globals(page, root)
 
-        # Write output
+        '''
+        Write output:
+        `dest` points to an .html post page at this point
+        pathlib.mkdir args: `parents=True` creates parents if not exist; 
+          `exist_ok=True` does not raise error for existing dir
+        '''
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page)
         print(f"  Built: {dest}")
@@ -250,6 +259,7 @@ def build_blog_listing(posts_meta, listing_template, components):
     for post in posts_meta:
         thumb_html = ""
         if post["thumbnail"]:
+            # `loading="lazy" defers image loading until visible in viewport
             thumb_html = (
                 f'    <img src="{post["thumbnail"]}" alt="" '
                 f'class="post-tile-thumb" loading="lazy">\n'

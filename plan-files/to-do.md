@@ -10,6 +10,8 @@
 
 1. There's some sort of issue with using embed tags for my resume PDF. Looks like it doesn't render on Android phones. I need to look into this and find a more inclusive solution.
 
+1. My `build.py` build script overwrites everything every time. It would be nice to store hashes of source files, and only perform updates if the source hashes have changed. Cleaner, faster. 
+
 1. See other .md files for additional plans that I asked my coding assistant to come up with.
    1. Bot mitigation, robots.txt
    1. Markdown parser/post deployment
