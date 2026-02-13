@@ -2,6 +2,7 @@
 title: "CIS Controls Personal Security Program - Week 2"
 date: 2026-02-01
 summary: "Booting a Raspberry Pi 4 from USB 3.0 for the home security lab."
+author: "Andrew Antles"
 thumbnail_alt: "Raspberry Pi Imager software storage selection screen"
 ---
 

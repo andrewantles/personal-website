@@ -209,11 +209,13 @@ def build_posts(components):
         title = meta.get("title", md_file.stem)
         date = meta.get("date", "")
         date_display = format_date(date)
+        author = meta.get("author", "Andrew Antles")
 
         page = post_template
         page = page.replace("{{ title }}", title)
         page = page.replace("{{ date }}", date)
         page = page.replace("{{ date_display }}", date_display)
+        page = page.replace("{{ author }}", author)
         page = page.replace("{{ toc }}", toc_block)
         page = page.replace("{{ content }}", html_content)
 
@@ -247,6 +249,7 @@ def build_posts(components):
             "title": title,
             "date": date,
             "date_display": date_display,
+            "author": author,
             "summary": meta.get("summary", ""),
             "slug": md_file.stem,
             "thumbnail": listing_thumbnail,

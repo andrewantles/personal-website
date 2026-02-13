@@ -12,7 +12,9 @@
 
     <main class="page-content">
       <article class="blog-post">
-        <time datetime="{{ date }}">{{ date_display }}</time>
+        <p class="post-meta">
+          <time datetime="{{ date }}">{{ date_display }}</time> by <span class="author">{{ author }}</span>
+        </p>
         {{ toc }}
         {{ content }}
       </article>

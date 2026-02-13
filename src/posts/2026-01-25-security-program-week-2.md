@@ -2,6 +2,7 @@
 title: "CIS Controls Personal Security Program - Week 2"
 date: 2026-01-25
 summary: "Blog preparation, tools research, and other updates."
+author: "Andrew Antles"
 thumbnail_alt: "Blog screenshot before changes"
 ---
 
