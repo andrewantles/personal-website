@@ -21,3 +21,6 @@ Same question with format strings.
 
 ToDo - AskClaude:  
 I want alt text for all thumbnails, and all html img tags. Looks like this is completely omitted in the build script.
+
+ToDo:
+Build script needs to NOT build the README.md file in the /src/posts directory

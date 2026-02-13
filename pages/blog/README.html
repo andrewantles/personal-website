@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>README - AndrewAntles.Net</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/style.css">
+  </head>
+  <body>
+    <div class="header">
+  <img id="header-pic" src="../../public/img/profile.jpg" alt="Profile picture headshot of Andrew Antles">
+  <h1 id="header-text">AndrewAntles.Net</h1>
+</div>
+
+    <div class="menu-container">
+  <div class="menu">
+    <span><a href="../../pages/blog.html">Blog</a></span>
+    <span><a href="../../pages/resume.html">Resume</a></span>
+    <span><a href="../../pages/about.html">About</a></span>
+  </div>
+</div>
+
+
+    <main class="page-content">
+      <article class="blog-post">
+        <time datetime=""></time>
+        <nav class="toc" aria-label="Table of contents">
+  <h2>Outline</h2>
+  <div class="toc">
+<ul>
+<li><a href="#notes">Notes</a></li>
+</ul>
+</div>
+
+</nav>
+        <h1 id="notes">Notes</h1>
+<p><code>build.py</code> build script assumes:
+- Every blog post begins with a YAML frontmatter section, as follows:
+    - Starts and ends with <code>---</code>
+    - Nothing comes before the <code>---</code>; the first <code>---</code> is the very beginning of the file
+    - Each item in the frontmatter is a key, value pair separated by a <code>:</code>; e.g. <code>key: value</code>
+        - Values that are not dates are strings between double quotes (<code>""</code>)
+- That post images, and only post images, are kept in a sub-directory here with the same name as the post markdown file.</p>
+<p>Frontmatter should include, at a minimum:
+- title
+- date in format: yyyy-mm-dd
+- summary
+    - Brief description of the post contents, for use with blog listing tiles.</p>
+      </article>
+    </main>
+
+    <footer class="footer">
+  <p id="copyright">&copy; 2026 AndrewAntles.net</p>
+  <nav class="social-links" aria-label="Social media links">
+    <a href="https://www.linkedin.com/in/andrew-antles" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <img src="../../public/img/company-logos/linkedin/In-Blue-128.png" alt="LinkedIn Logo">
+    </a>
+    <a href="https://github.com/andrewantles" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <img src="../../public/img/company-logos/github/github-mark.png" alt="GitHub Logo">
+    </a>
+  </nav>
+</footer>
+
+  </body>
+</html>

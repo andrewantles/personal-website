@@ -28,7 +28,7 @@ TEMPLATES_DIR = SRC / "templates"
 POSTS_DIR = ROOT / "posts"
 PAGES_DIR = ROOT / "pages"
 BLOG_DIR = PAGES_DIR / "blog"
-IMG_DEST = ROOT / "public" / "img" / "blog-img"
+IMG_DEST = ROOT / "public" / "blog-files"
 
 # ---------------------------------------------------------------------------
 # Component injection (general-purpose, used for all pages)
@@ -240,6 +240,11 @@ def build_posts(components):
             clean = re.sub(r"^posts/", "", clean)
             listing_thumbnail = f"../public/blog-files/{clean}"
 
+        # Get thumbnail alt text from frontmatter, or use title as fallback
+        thumbnail_alt = meta.get("thumbnail_alt", "")
+        if not thumbnail_alt and listing_thumbnail:
+            thumbnail_alt = f"Thumbnail for: {title}"
+
         posts_meta.append({
             "title": title,
             "date": date,
@@ -247,6 +252,7 @@ def build_posts(components):
             "summary": meta.get("summary", ""),
             "slug": md_file.stem,
             "thumbnail": listing_thumbnail,
+            "thumbnail_alt": thumbnail_alt,
         })
 
     # Generate the blog listing page
@@ -261,7 +267,7 @@ def build_blog_listing(posts_meta, listing_template, components):
         if post["thumbnail"]:
             # `loading="lazy" defers image loading until visible in viewport
             thumb_html = (
-                f'    <img src="{post["thumbnail"]}" alt="" '
+                f'    <img src="{post["thumbnail"]}" alt="{post["thumbnail_alt"]}" '
                 f'class="post-tile-thumb" loading="lazy">\n'
             )
 

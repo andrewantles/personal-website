@@ -1,5 +1,7 @@
 1. `./plan-files/blog-build-code-review.md` - need to finalize these findings before first build
 
+1. Build out build script automated tests to confirm a majority of things run as expected.
+
 1. I need a non-javascript-enabled version of the website...
    1. See recent no-js.md plan file. Talks about leveraging local build scripts to make the site more accessible in addition to not requiring JS.
    

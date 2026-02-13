@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CIS Controls Personal Security Program - Week 2 - AndrewAntles.Net</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/style.css">
+  </head>
+  <body>
+    <div class="header">
+  <img id="header-pic" src="../../public/img/profile.jpg" alt="Profile picture headshot of Andrew Antles">
+  <h1 id="header-text">AndrewAntles.Net</h1>
+</div>
+
+    <div class="menu-container">
+  <div class="menu">
+    <span><a href="../../pages/blog.html">Blog</a></span>
+    <span><a href="../../pages/resume.html">Resume</a></span>
+    <span><a href="../../pages/about.html">About</a></span>
+  </div>
+</div>
+
+
+    <main class="page-content">
+      <article class="blog-post">
+        <time datetime="2026-01-25">January 25, 2026</time>
+        <nav class="toc" aria-label="Table of contents">
+  <h2>Outline</h2>
+  <div class="toc">
+<ul>
+<li><a href="#project-mission-north-star">Project Mission - north star</a></li>
+<li><a href="#documentation">Documentation</a><ul>
+<li><a href="#tools-and-implemenation-support">Tools and Implemenation Support</a></li>
+</ul>
+</li>
+<li><a href="#narative">Narative</a><ul>
+<li><a href="#opening">Opening</a></li>
+<li><a href="#blog-visual-updates">Blog Visual Updates</a><ul>
+<li><a href="#before">Before</a></li>
+<li><a href="#after">After</a></li>
+</ul>
+</li>
+<li><a href="#other-progress">Other Progress</a><ul>
+<li><a href="#revelation-of-the-week">Revelation (of the week?)</a><ul>
+<li><a href="#blog-css-styling">Blog CSS Styling</a></li>
+</ul>
+</li>
+<li><a href="#local-agent-sandbox">Local Agent Sandbox</a></li>
+<li><a href="#personal-security-program">Personal Security Program</a></li>
+<li><a href="#fun-tidbits">Fun Tidbits</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+</nav>
+        <h1 id="project-mission-north-star">Project Mission - north star</h1>
+<p>Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. </p>
+<h1 id="documentation">Documentation</h1>
+<h2 id="tools-and-implemenation-support">Tools and Implemenation Support</h2>
+<ul>
+<li>https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1</li>
+</ul>
+<h1 id="narative">Narative</h1>
+<h2 id="opening">Opening</h2>
+<p>Hello, and welcome back. Another week, another... something. Let's talk about how things went and how they are going. This post will start out as a bit of a journal entry. If you're just interested in the technical details, jump ahead to the <a href="#blog-visual-updates">Blog Visual Updates</a> section.</p>
+<p>I subscribed to Claude Pro this week. I'm really excited about it. I've got Claude Code running both locally and "on the Web."</p>
+<p>I opened up several Claude Code windows and got to work, only to quickly realize, I had uninstalled XCode from my Macbook at some point, and didn't have <code>git</code> available to start branching and landing changing. I'm not going to do this if I can't stay organized. (Why did I spend an entire week identifying a framework and program structure to follow?) I've witnessed too many "programs" that feel like "shoot from the hip" judgement calls, and there's just no structure there. Too easy to introduce bias. Too easy for opinions and ideas to change from week to week. Too easy to overlook simple fundamentals. Difficult to document policies and retain "sources of truth" for future reference regarding decisions and agreements. But, I digress. </p>
+<p>So, I quickly got derailed and had to spend part of an hour troubleshooting an App Store install error. This hurt, because I was already off to a late start due to some troubleing news that affected my family and that I felt compelled to attend to. (It was the right call.) But, at this point, I have <code>git</code> installed, an SSH key with passcode, and can start pushing commits. Let's get to it!</p>
+<h2 id="blog-visual-updates">Blog Visual Updates</h2>
+<p>My blog was in somewhat sad shape, so I spun up a Claude Code window to analyze it for problems, and I seeded it with a few of the obvious issues I was seeing. Overall I made some changes that I feel a lot more confident and proud about, including the following:
+- Updated fonts throughout
+- Resized and optimized the header
+- Resolved issues with how the social icons were displaying
+- Added the 2025 version of my resume
+- Updated the About Me page language
+- Added copyright footer with social links on all pages</p>
+<p>Here are a couple of screenshots showing the before and after. Much improved and much fresher feel if you ask me. Feel free to navigate around and check it out for yourself! <a href="https://andrewantles.net">AndrewAntles.Net</a></p>
+<h3 id="before">Before</h3>
+<p><img alt="Blog screenshot before changes" src="../../public/blog-files/2026-01-25-security-program-week-2-files/before-blog.png" /></p>
+<h3 id="after">After</h3>
+<p><img alt="Blog screenshot after changes" src="../../public/blog-files/2026-01-25-security-program-week-2-files/after-blog.png" /></p>
+<h2 id="other-progress">Other Progress</h2>
+<p>I felt it was important to refresh my blog this week, since it is the front door to this security program content that I'm putting together. That's not to say that I didn't make progress on the overall program. I made several kind of baby steps towards the overall goal, but first:</p>
+<h3 id="revelation-of-the-week">Revelation (of the week?)</h3>
+<p>I had a bit of a revelation following an on-site training at my current employer by Anthropic: <em>A majority of work will be flowing through agents.</em> It sounds like this is already happening at Anthropic - the trainer described walking through the office and seeing multiple Claude Code windows open on every workstation. And, with the beta release of Claude Cowork last week, enabling lower-barrier Claude Code-like workflows on documents, browsers, and more, I have the strong feeling that, I should get used to interacting with my technical environments via LLM tools, basically now. </p>
+<p>I don't ever want to forget my roots and fundamentals. I believe these are going to be even more important as we work through scores of agents, not less. We'll need to be able to jump in and play clean-up crew, much like a Staff or Principal Engineer called in to debug and resolve thorny, ambiguous problems.</p>
+<p>In other words, our skills have to get even sharper. It's not that work will be replaced. It's actually even bigger stakes, operating at even higher levels.</p>
+<p>The best engineers will be those that are:
+- most comfortable interacting with their technical environments via agentic tooling,
+- able to hold many different workstreams in their head, 
+- able to stay extremely organized to reduce the cost of context switching, and
+- able to dig in and resolve thorny, ambiguous problems quickly and completely. </p>
+<p>Part of this conclusion came to me just today as I worked on:</p>
+<h4 id="blog-css-styling">Blog CSS Styling</h4>
+<p>Claude was moving quick and asking to make changes I didn't fully understand. If my architecture gets away from me, I could really land in trouble and make my life a lot more difficult down the road having to untangle something that me and my agents agree is spaghetti code in a domain I don't spend as much time in.</p>
+<p>I compensated by this with prompting along the lines of "slow down and describe you recommended approach to the problem, along with any alternatives you think are worth considering. For each change I need to understand what is changing, how that element works, why it needs to change, and what the expected output is." </p>
+<p>After writing that the second time, I quickly dumped it into my <code>CLAUDE.md</code> file. It really helped keep things clear and prevented sweeping architecture changes.</p>
+<h3 id="local-agent-sandbox">Local Agent Sandbox</h3>
+<p>If you're running a local agent on your trusted, daily driver, sooner or later you're going to run into trouble. Either that, or you'll have to slow yourself way down to selectively approve prompts so your daily driver doesn't get wrecked.</p>
+<p>Quick plug for the <a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/">Lethal Trifecta</a> by Simon Willison. I feel like this is basically industry-standard knowledge at this point, and is a great, simplified way to enumerating agent risk.</p>
+<p>In the Trifecta, our host machine is our "private data," and until we can effectively cut off one of the legs of the Lethal Trifecta, we're at risk of our agents being turned against us. </p>
+<p>To that end, Simon also recently linked to <a href="https://www.luiscardoso.dev/blog/sandboxes-for-ai">this very informative post</a> by Luis Cardoso breaking down sandbox fundamentals and exactly what certain isolation paradigms do, don't do, and the performance and maintenance trade offs of eacy. I highly recommend saving a local copy for future safe keeping. Of both of these blog posts actually. </p>
+<p>Then, while setting up Claude Code, I read into the Claude Code <a href="https://code.claude.com/docs/en/devcontainer">.devcontainers setup guide</a>. Having read the article by Luis Cardosa, I was surprised to see the lack of mention of seccomp profiles, and the focus on network-only sandbox controls. Which, I suppose just makes me really thankful to have discovered Cardosa's article, because I was thinking of sandboxing primarily as a network layer control, as opposed to thinking about how the OS kernel is shared or accessed - something he calls out directly in his post! </p>
+<p>So, more digging and understanding to do here to develop a robust agent sandbox solution, but sort of "ripped the bandaid off," and found some really good sources that we should be able to make something really comprehensive out of. </p>
+<h3 id="personal-security-program">Personal Security Program</h3>
+<p>Last, but not least! </p>
+<p>One of the easiest to leverage, and most time saving features of Claude Pro is the <a href="https://claude.com/blog/research">Research feature</a>. I included this Center for Internet Security (CIS) <a href="https://learn.cisecurity.org/Establishing-Essential-Cyber-Hygiene">Cyber Hygiene guide</a> since it contains tool recommendations, along with a prompt asking it to prioritize Docker workloads, and tools that I can collaborate with LLM agents on (i.e. with API and CLI tools or MCP support). </p>
+<p>Come to think of it, it doesn't seem like very many of the open source security tools support MCP at this point - maybe a good place to make some contributions 🤔 hmm... Note to self.</p>
+<p>Additionally, I gave it a description of my devices, a rough layout of my network, and told it to tell me how much I can run on a Raspberry PI 4, as well as when I need to upgrade my "security node" to handle bigger workloads as my program matures. It came back with a promising plan, and I look forward to implementing some of the elements for it.</p>
+<h3 id="fun-tidbits">Fun Tidbits</h3>
+<p>Other interesting things I spent time thinking about and learning about this week were AI data centers and Google's TPU chips. I also spent some time watching Andrej Karpathy's <a href="https://www.youtube.com/watch?v=kCc8FmEb1nY&amp;list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&amp;index=7">Youtube lecture</a> about how to build ChatGPT from first principles based on the famous and foundational <a href="https://arxiv.org/abs/1706.03762"><em>Attention is All You Need</em></a> paper. (Karpathy video link in full course playlist)</p>
+<p>Until next time!</p>
+      </article>
+    </main>
+
+    <footer class="footer">
+  <p id="copyright">&copy; 2026 AndrewAntles.net</p>
+  <nav class="social-links" aria-label="Social media links">
+    <a href="https://www.linkedin.com/in/andrew-antles" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <img src="../../public/img/company-logos/linkedin/In-Blue-128.png" alt="LinkedIn Logo">
+    </a>
+    <a href="https://github.com/andrewantles" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <img src="../../public/img/company-logos/github/github-mark.png" alt="GitHub Logo">
+    </a>
+  </nav>
+</footer>
+
+  </body>
+</html>

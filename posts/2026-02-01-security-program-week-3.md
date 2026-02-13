@@ -2,6 +2,7 @@
 title: "CIS Controls Personal Security Program - Week 2"
 date: 2026-02-01
 summary: "Booting a Raspberry Pi 4 from USB 3.0 for the home security lab."
+thumbnail_alt: "Raspberry Pi boot options"
 ---
 
 # Project Mission - north star
@@ -52,7 +53,7 @@ I went through the settings of the OS just to see if anything stuck out. For som
 
 I was able to use the `raspi-config` tool to validate the boot order. It matched what Opus told me. I would like to come back and harden this machine and lock the boot security down, but that's not right now. Any of the options present allow an adversary with physical access to the Pi the ability to hijack the boot order.
 
-![Blog screenshot after changes](./week-3-files/pi-boot-options.png)
+![pi-boot-options](./2026-02-01-security-program-week-3-files/pi-boot-options.png)
 
 As fun as it sounds, it's not going to be an appropriate use of time to get into firmware patching. I can also assess physical security of the device as well, such as using a locked server cabinet in addition to standard home security. 
 
