@@ -47,6 +47,7 @@ def inject_components(html, components):
     def replacer(match):
         name = match.group(1)
         return components.get(name, match.group(0))
+    # re.sub replaces arg1 with arg2, from source: arg3
     return re.sub(r"<!-- component:(\w+) -->", replacer, html)
 
 # ---------------------------------------------------------------------------
@@ -54,7 +55,7 @@ def inject_components(html, components):
 # ---------------------------------------------------------------------------
 
 def compute_root(dest_path):
-    """Compute the relative path from an output file back to the project root.
+    """Uses `pathlib` to compute the relative path from an output file back to the project root.
 
     Examples:
         pages/blog.html       -> "../"
@@ -107,11 +108,13 @@ def format_date(date_str):
 # ---------------------------------------------------------------------------
 
 def copy_post_images():
-    """Copy image directories from /posts/ to /public/img/blog-img/.
+    """Copy image directories from /posts/ to /public/blog-files/.
 
     Any subdirectory in /posts/ is treated as an image directory and copied
     in its entirety. Existing copies are replaced to keep things fresh.
     """
+    # pathlib.mkdir args: `parents=True` creates parents if not exist; 
+    #   `exist_ok=True` does not raise error for existing dir
     IMG_DEST.mkdir(parents=True, exist_ok=True)
     for item in POSTS_DIR.iterdir():
         if item.is_dir():
@@ -122,7 +125,7 @@ def copy_post_images():
 
 
 def rewrite_image_paths(html, root):
-    """Rewrite relative image src paths to point at /public/img/blog-img/.
+    """Rewrite relative image src paths to point at /public/blog-files/.
 
     Only rewrites local relative paths. Absolute URLs (http://, https://),
     root-relative paths (/), and data URIs are left untouched.
@@ -130,7 +133,7 @@ def rewrite_image_paths(html, root):
     Args:
         html: The HTML string to process.
         root: The relative path from the output file to the project root
-              (e.g., "../../" for pages/blog/post.html).
+              (e.g., "../../" for pages/blog/eg_post.html).
     """
     def replacer(match):
         before = match.group(1)   # <img ... src="
@@ -145,8 +148,8 @@ def rewrite_image_paths(html, root):
         clean = re.sub(r"^(\.\./)*(\./)*", "", src)
         clean = re.sub(r"^posts/", "", clean)
 
-        return f"{before}{root}public/img/blog-img/{clean}{after}"
-
+        return f"{before}{root}public/blog-files/{clean}{after}"
+    # re.sub replaces arg1 with arg2, from source: arg3
     return re.sub(r'(<img[^>]+src=["\'])([^"\']+)(["\'])', replacer, html)
 
 
@@ -166,6 +169,8 @@ def build_posts(components):
     """Convert markdown posts to HTML and generate the blog listing page."""
     post_template = (TEMPLATES_DIR / "post.html").read_text()
     listing_template = (TEMPLATES_DIR / "blog.html").read_text()
+    # pathlib.mkdir args: `parents=True` creates parents if not exist; 
+    #   `exist_ok=True` does not raise error for existing dir
     BLOG_DIR.mkdir(parents=True, exist_ok=True)
 
     posts_meta = []
@@ -187,7 +192,7 @@ def build_posts(components):
         dest = BLOG_DIR / (md_file.stem + ".html")
         root = compute_root(dest)
 
-        # Rewrite image paths to point at public/img/blog-img/
+        # Rewrite image paths to point at public/blog-files/
         html_content = rewrite_image_paths(html_content, root)
 
         # Build the TOC block (only if there are headings)
@@ -201,6 +206,7 @@ def build_posts(components):
             )
 
         # Fill in the post template
+        # dict.get() returns the second arg if the first does not exist
         title = meta.get("title", md_file.stem)
         date = meta.get("date", "")
         date_display = format_date(date)
@@ -216,7 +222,12 @@ def build_posts(components):
         page = inject_components(page, components)
         page = replace_globals(page, root)
 
-        # Write output
+        '''
+        Write output:
+        `dest` points to an .html post page at this point
+        pathlib.mkdir args: `parents=True` creates parents if not exist; 
+          `exist_ok=True` does not raise error for existing dir
+        '''
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(page)
         print(f"  Built: {dest}")
@@ -224,9 +235,10 @@ def build_posts(components):
         # Compute the thumbnail path relative to the listing page
         listing_thumbnail = None
         if raw_thumbnail:
+            # re.sub replaces arg1 with arg2, from source: arg3
             clean = re.sub(r"^(\.\./)*(\./)*", "", raw_thumbnail)
             clean = re.sub(r"^posts/", "", clean)
-            listing_thumbnail = f"../public/img/blog-img/{clean}"
+            listing_thumbnail = f"../public/blog-files/{clean}"
 
         posts_meta.append({
             "title": title,
@@ -247,6 +259,7 @@ def build_blog_listing(posts_meta, listing_template, components):
     for post in posts_meta:
         thumb_html = ""
         if post["thumbnail"]:
+            # `loading="lazy" defers image loading until visible in viewport
             thumb_html = (
                 f'    <img src="{post["thumbnail"]}" alt="" '
                 f'class="post-tile-thumb" loading="lazy">\n'

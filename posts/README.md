@@ -10,6 +10,6 @@
 
 Frontmatter should include, at a minimum:
 - title
-- date
+- date in format: yyyy-mm-dd
 - summary
     - Brief description of the post contents, for use with blog listing tiles.

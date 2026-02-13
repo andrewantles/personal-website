@@ -1,3 +1,5 @@
+1. `./plan-files/blog-build-code-review.md` - need to finalize these findings before first build
+
 1. I need a non-javascript-enabled version of the website...
    1. See recent no-js.md plan file. Talks about leveraging local build scripts to make the site more accessible in addition to not requiring JS.
    
@@ -10,9 +12,14 @@
 
 1. There's some sort of issue with using embed tags for my resume PDF. Looks like it doesn't render on Android phones. I need to look into this and find a more inclusive solution.
 
+1. My `build.py` build script overwrites everything every time. It would be nice to store hashes of source files, and only perform updates if the source hashes have changed. Cleaner, faster. 
+
 1. See other .md files for additional plans that I asked my coding assistant to come up with.
+   1. style-considerations.md
    1. Bot mitigation, robots.txt
    1. Markdown parser/post deployment
    1. SPA application consideration
+
+1. I should go through the GitHub settings when I have time to understand all the different controls and make sure I'm using all the latest best practices.
 
 1. I'd like to understand what seems to be a default GitHub Action that appears to come along standard with GitHub Pages usage. It would be interesting to understand what exactly this is doing and how it works. (Seems to use Jekyll.)
