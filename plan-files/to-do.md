@@ -2,6 +2,7 @@
 1. Build pipeline action items:
    1. `./plan-files/blog-build-code-review.md` - need to finalize these findings before first build
    1. Build out build script automated tests to confirm a majority of things run as expected.
+   1. Blog posts do not have titles at the top - I want this in an h2 at the top, like "Blog" on the listing page, blog.html
    1. Expand build script to replace the rest of the JS components.
    
 1. I want a dark-mode toggle in the top-right of the header
