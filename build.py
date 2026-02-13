@@ -1,7 +1,7 @@
 """
 Blog build script for AndrewAntles.Net
 
-Converts markdown posts in /posts/ to HTML pages in /pages/blog/.
+Converts markdown posts in /src/posts/ to HTML pages in /pages/blog/.
 Generates a blog listing page at /pages/blog.html.
 Injects shared HTML components (header, navbar, footer) at build time.
 
@@ -25,7 +25,7 @@ ROOT = Path(__file__).parent
 SRC = ROOT / "src"
 COMPONENTS_DIR = SRC / "components"
 TEMPLATES_DIR = SRC / "templates"
-POSTS_DIR = ROOT / "posts"
+POSTS_DIR = SRC / "posts"
 PAGES_DIR = ROOT / "pages"
 BLOG_DIR = PAGES_DIR / "blog"
 IMG_DEST = ROOT / "public" / "blog-files"
@@ -108,9 +108,9 @@ def format_date(date_str):
 # ---------------------------------------------------------------------------
 
 def copy_post_images():
-    """Copy image directories from /posts/ to /public/blog-files/.
+    """Copy image directories from /src/posts/ to /public/blog-files/.
 
-    Any subdirectory in /posts/ is treated as an image directory and copied
+    Any subdirectory in /src/posts/ is treated as an image directory and copied
     in its entirety. Existing copies are replaced to keep things fresh.
     """
     # pathlib.mkdir args: `parents=True` creates parents if not exist; 
@@ -144,9 +144,8 @@ def rewrite_image_paths(html, root):
         if src.startswith(("http://", "https://", "/", "#", "data:")):
             return match.group(0)
 
-        # Strip leading ./ or ../  and any leading "posts/" prefix
+        # Strip leading ./ or ../ from relative paths
         clean = re.sub(r"^(\.\./)*(\./)*", "", src)
-        clean = re.sub(r"^posts/", "", clean)
 
         return f"{before}{root}public/blog-files/{clean}{after}"
     # re.sub replaces arg1 with arg2, from source: arg3
@@ -239,9 +238,8 @@ def build_posts(components):
         # Compute the thumbnail path relative to the listing page
         listing_thumbnail = None
         if raw_thumbnail:
-            # re.sub replaces arg1 with arg2, from source: arg3
+            # Strip leading ./ or ../ from relative paths
             clean = re.sub(r"^(\.\./)*(\./)*", "", raw_thumbnail)
-            clean = re.sub(r"^posts/", "", clean)
             listing_thumbnail = f"../public/blog-files/{clean}"
 
         # Get thumbnail alt text from frontmatter, or use title as fallback
@@ -330,7 +328,7 @@ def get_mtimes(directories):
 
 def watch():
     """Poll for file changes and rebuild when detected."""
-    watch_dirs = [SRC, POSTS_DIR]
+    watch_dirs = [SRC]
     print("Watching for changes... (Ctrl+C to stop)")
     build()
     last_mtimes = get_mtimes(watch_dirs)
