@@ -199,7 +199,6 @@ def build_posts(components):
         if "<li>" in toc_html:
             toc_block = (
                 '<nav class="toc" aria-label="Table of contents">\n'
-                "  <h2>Outline</h2>\n"
                 f"  {toc_html}\n"
                 "</nav>"
             )

@@ -272,28 +272,21 @@ code {
 
 /* Table of contents / Outline */
 .toc {
-  background-color: #f8f8f8;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  padding: 1rem 1.5rem;
   margin: 1.5rem 0;
-}
-
-.toc h2 {
-  font-size: 1rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #555;
 }
 
 .toc ul {
   margin: 0;
-  padding-left: 1.25rem;
+  padding-left: 0;
   list-style: none;
 }
 
+.toc ul ul {
+  padding-left: 1.5rem;
+}
+
 .toc li {
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
 }
 
 .toc a {
