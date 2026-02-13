@@ -15,4 +15,6 @@
    1. Markdown parser/post deployment
    1. SPA application consideration
 
+1. I should go through the GitHub settings when I have time to understand all the different controls and make sure I'm using all the latest best practices.
+
 1. I'd like to understand what seems to be a default GitHub Action that appears to come along standard with GitHub Pages usage. It would be interesting to understand what exactly this is doing and how it works. (Seems to use Jekyll.)

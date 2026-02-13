@@ -36,7 +36,7 @@ pages/                                  # Build output
     2026-01-18-security-program-week-1.html
     ...
 
-public/img/blog-img/                    # Build output (copied from /posts/)
+public/blog-files/                    # Build output (copied from /posts/)
   2026-01-25-security-program-week-2-files/
   2026-02-01-security-program-week-3-files/
   2024-03-01-google-ml-crash-course/
@@ -274,14 +274,14 @@ them cleanly.
 
 3. The build script:
    - Scans `/posts/` for image directories (any subdirectory)
-   - Copies each directory to `/public/img/blog-img/<post-slug>/`
+   - Copies each directory to `/public/blog-files/<post-slug>/`
    - Creates the destination folder if it doesn't exist
    - Rewrites image `src` paths in the generated HTML to point at the
      public copy
 
 4. Result on disk after build:
    ```
-   public/img/blog-img/
+   public/blog-files/
      2026-02-01-security-program-week-3-files/
        screenshot.png
        network-diagram.png
@@ -293,7 +293,7 @@ them cleanly.
 5. In the built HTML at `pages/blog/2026-02-01-security-program-week-3.html`,
    image tags become:
    ```html
-   <img src="../../public/img/blog-img/2026-02-01-security-program-week-3-files/network-diagram.png"
+   <img src="../../public/blog-files/2026-02-01-security-program-week-3-files/network-diagram.png"
         alt="Network diagram">
    ```
 
@@ -303,9 +303,9 @@ them cleanly.
 import shutil
 
 def copy_post_images():
-    """Copy image directories from /posts/ to /public/img/blog-img/."""
+    """Copy image directories from /posts/ to /public/blog-files/."""
     posts_dir = Path("posts")
-    img_dest = Path("public/img/blog-img")
+    img_dest = Path("public/blog-files")
 
     for item in posts_dir.iterdir():
         if item.is_dir():
@@ -315,19 +315,19 @@ def copy_post_images():
             shutil.copytree(item, dest)
 
 def rewrite_image_paths(html, post_slug):
-    """Rewrite relative image paths to point at /public/img/blog-img/."""
+    """Rewrite relative image paths to point at /public/blog-files/."""
     # Matches src="./some-dir/image.png" or src="some-dir/image.png"
-    # Rewrites to src="../../public/img/blog-img/some-dir/image.png"
+    # Rewrites to src="../../public/blog-files/some-dir/image.png"
     # (../../ because built HTML is at pages/blog/post.html)
     import re
     def replacer(match):
         prefix = match.group(1)  # src=" or src='
         path = match.group(2)
         path = path.lstrip("./")
-        return f'{prefix}../../public/img/blog-img/{path}'
+        return f'{prefix}../../public/blog-files/{path}'
     return re.sub(
         r'(src=["\'])(\./?.+?-files/.+?)(["\'])',
-        lambda m: f'{m.group(1)}../../public/img/blog-img/{m.group(2).lstrip("./")}{m.group(3)}',
+        lambda m: f'{m.group(1)}../../public/blog-files/{m.group(2).lstrip("./")}{m.group(3)}',
         html
     )
 ```
@@ -336,7 +336,7 @@ def rewrite_image_paths(html, post_slug):
 
 - `/posts/` is your authoring space. `/public/` is what the site serves.
   Keeping these roles separate means you could add a `.gitignore` for
-  `/public/img/blog-img/` later if you wanted (build artifact), or not.
+  `/public/blog-files/` later if you wanted (build artifact), or not.
 - Images co-located with markdown for easy authoring; images in `/public/`
   for clean serving paths.
 - The copy is fast (a few images) and idempotent (re-running build refreshes
@@ -383,7 +383,7 @@ those since it knows the post order at build time.
    adding these now.)*
 
 2. **~~Image paths~~:** Resolved. Build script copies images from `/posts/`
-   to `/public/img/blog-img/` and rewrites paths in the generated HTML.
+   to `/public/blog-files/` and rewrites paths in the generated HTML.
 
 3. **The Google ML post:** It's raw HTML in a `.md` file. Works with
    `python-markdown` but needs frontmatter added for the listing page.
