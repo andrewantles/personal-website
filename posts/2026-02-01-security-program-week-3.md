@@ -2,6 +2,7 @@
 title: "CIS Controls Personal Security Program - Week 2"
 date: 2026-02-01
 summary: "Booting a Raspberry Pi 4 from USB 3.0 for the home security lab."
+thumbnail_alt: "Raspberry Pi Imager software storage selection screen"
 ---
 
 # Project Mission - north star
@@ -28,8 +29,12 @@ An initial search I did during the week seemed to indicate that we have to modif
 
 I started by digging through the official Raspberry Pi documentation as the most authoritative source, and also opened a few blog posts sorting by a combination of most recent and reputation of the sources.
 
-The ["Getting Started" documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system) leans heavy into recommending SD card installs as the easiest and most approachable route; however, a screenshot of the recommended software, the official Raspberry Pi Imager software, [shows an attached USB](https://www.raspberrypi.com/documentation/computers/images/imager/choose-storage.png?hash=1d81f704b4fef7dd5bc2b043c87a5202) as the destination to write the OS image. I decided to grab a copy of the latst version of the software and install it locally for a closer look. Figuring I didn't have much time today with not feeling well, I just went for it and had the software write a standard 64-bit Raspberry Pi OS image to my USB drive. I let it spin while I dug deeped into the documentation. Perfect is the enemy of good. At this stage, it's better to fire a few bullets and run a few tests to get some initial feedback right away, versus researching and understanding the entire domain and developing a "perfect" action plan. I knew this was a good direction becuase I already watched myself looking at the USB drive partitions using CLI tools, and while it's very interesting and I'd love to do a deep dive into firmware flashing and drive partitions, etc., I knew that wasn't the most direct line to my northstar goal for this project. 
-- I should get the screenshot, or at the very least 
+The ["Getting Started" documentation](https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system) leans heavy into recommending SD card installs as the easiest and most approachable route; however, a screenshot of the recommended software, the official Raspberry Pi Imager software, shows an attached USB as the destination to write the OS image: 
+
+![pi-imager-storage-selection](./2026-02-01-security-program-week-3-files/pi-imager-storage-selection.png)
+
+I decided to grab a copy of the latst version of the software and install it locally for a closer look. Figuring I didn't have much time today with not feeling well, I just went for it and had the software write a standard 64-bit Raspberry Pi OS image to my USB drive. I let it spin while I dug deeped into the documentation. Perfect is the enemy of good. At this stage, it's better to fire a few bullets and run a few tests to get some initial feedback right away, versus researching and understanding the entire domain and developing a "perfect" action plan. I knew this was a good direction becuase I already watched myself looking at the USB drive partitions using CLI tools, and while it's very interesting and I'd love to do a deep dive into firmware flashing and drive partitions, etc., I knew that wasn't the most direct line to my northstar goal for this project. 
+
 
 What do you know? By the time I finised writing this last paragraph, the imaging software is already complete. Time to jam it into the Pi and see what feedback we get!
 
@@ -52,7 +57,7 @@ I went through the settings of the OS just to see if anything stuck out. For som
 
 I was able to use the `raspi-config` tool to validate the boot order. It matched what Opus told me. I would like to come back and harden this machine and lock the boot security down, but that's not right now. Any of the options present allow an adversary with physical access to the Pi the ability to hijack the boot order.
 
-![Blog screenshot after changes](./week-3-files/pi-boot-options.png)
+![pi-boot-options](./2026-02-01-security-program-week-3-files/pi-boot-options.png)
 
 As fun as it sounds, it's not going to be an appropriate use of time to get into firmware patching. I can also assess physical security of the device as well, such as using a locked server cabinet in addition to standard home security. 
 
@@ -64,3 +69,7 @@ The other step I was able to take this was to confirm SSH access. During the OS 
 ## Wrap Up
 
 Pretty good for just having a few hours to throw at the project. I'll be taking a break next week to coach at the [Spokane Cyber Cup](https://spokanectf.github.io/). It's a great event that my friend, [Maxwell Dulin](https://maxwelldulin.com/Blog), puts on every year. Teams from high schools and colleges all over the region come to compete, but for Maxwell his main goal with the event is to share knowledge with exposure to cyber security concepts and challenges. I'm lucky enough to be able to coach at the event, and I just want to say that I think it's super cool that Maxwell goes out of his way to bring this event to Spokane, a city with a lot of promise and sometimes a little less exposure to cyber security education events like this one. Thank you, Maxwell!
+
+Thanks for reading,
+
+*Andrew Antles*

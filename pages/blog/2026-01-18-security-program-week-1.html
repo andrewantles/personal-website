@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CIS Controls Personal Security Program - Week 1 - AndrewAntles.Net</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/style.css">
+  </head>
+  <body>
+    <div class="header">
+  <img id="header-pic" src="../../public/img/profile.jpg" alt="Profile picture headshot of Andrew Antles">
+  <h1 id="header-text">AndrewAntles.Net</h1>
+</div>
+
+    <div class="menu-container">
+  <div class="menu">
+    <span><a href="../../pages/blog.html">Blog</a></span>
+    <span><a href="../../pages/resume.html">Resume</a></span>
+    <span><a href="../../pages/about.html">About</a></span>
+  </div>
+</div>
+
+
+    <main class="page-content">
+      <article class="blog-post">
+        <time datetime="2026-01-18">January 18, 2026</time>
+        <nav class="toc" aria-label="Table of contents">
+  <h2>Outline</h2>
+  <div class="toc">
+<ul>
+<li><a href="#project-mission-north-star">Project Mission - north star</a></li>
+<li><a href="#documentation">Documentation:</a><ul>
+<li><a href="#overview-introductory-docs">Overview &amp; Introductory Docs</a></li>
+<li><a href="#core-cis-81-doc">Core CIS 8.1 Doc</a></li>
+<li><a href="#cis-policy-templates">CIS Policy Templates</a></li>
+<li><a href="#tools-and-implemenation-support">Tools and Implemenation Support</a></li>
+</ul>
+</li>
+<li><a href="#narrative">Narrative</a><ul>
+<li><a href="#program-selection">Program Selection</a></li>
+<li><a href="#cis-implementation-groups">CIS Implementation Groups</a><ul>
+<li><a href="#implementation-groups-and-data-classification">Implementation Groups and Data Classification</a></li>
+<li><a href="#other-cis-ig-considerations">Other CIS IG Considerations</a></li>
+</ul>
+</li>
+<li><a href="#onramp-to-the-controls">Onramp to the Controls</a></li>
+<li><a href="#policy-development-and-maintenance">Policy Development and Maintenance</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+</nav>
+        <h1 id="project-mission-north-star">Project Mission - north star</h1>
+<p>Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. </p>
+<h1 id="documentation">Documentation:</h1>
+<h2 id="overview-introductory-docs">Overview &amp; Introductory Docs</h2>
+<ul>
+<li>https://learn.cisecurity.org/controls-v8.1-guide-to-implementation-groups</li>
+<li>https://learn.cisecurity.org/CIS-Controls-v8.1-Roadmap-to-the-CIS-Critical-Security-Controls</li>
+<li>https://learn.cisecurity.org/cost-of-cyber-defense-v1.1-pdf</li>
+</ul>
+<h2 id="core-cis-81-doc">Core CIS 8.1 Doc</h2>
+<ul>
+<li>https://learn.cisecurity.org/cis-controls-v8-1-guide-pdf</li>
+</ul>
+<h2 id="cis-policy-templates">CIS Policy Templates</h2>
+<ul>
+<li>https://www.cisecurity.org/controls/policy-templates</li>
+</ul>
+<h2 id="tools-and-implemenation-support">Tools and Implemenation Support</h2>
+<ul>
+<li>https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1</li>
+<li>https://www.cisecurity.org/advisory</li>
+<li>https://www.cisecurity.org/controls/resources?crc=environment-specific-guidance<ul>
+<li>https://learn.cisecurity.org/CIS-Controls-v8-Mobile-Companion-Guide</li>
+<li>https://learn.cisecurity.org/controls-v8-1-iot</li>
+</ul>
+</li>
+</ul>
+<h1 id="narrative">Narrative</h1>
+<h2 id="program-selection">Program Selection</h2>
+<p>Today, I'm looking at programs for implementing a cyber security program on my personal network. I want to deepen my security engineering skills, so I thought it would be fun and interesting to build out a personal security program and run it. </p>
+<p>I'm looking at various frameworks and standards in an effort to start at a higher level and establish an overal structure. Once various program elements are identified, specific tools, vendors, and devices will be implemented. </p>
+<p>I've decided on the CIS Controls framework, since it goes a bit deeper into technical requirements detail than the NIST CSF, and is freely available, unlike ISO 27001. Bonus points because the CIS guides are nicely formated and easy to work through.</p>
+<p>I looked briefly at the controls details in NIST publications, SP 800-53 and SP 800-171, but decided against going with these for several reasons. I wanted to stick with something approachable, and applicable, and I felt that these standards were targeted too closely to government and government-adjacent audiences that are dealing with national security type concerns. I feel I can maintain greater momentum on this project going with the more adaptable CIS controls. </p>
+<h2 id="cis-implementation-groups">CIS Implementation Groups</h2>
+<p>One of the first step in CIS is to identify the Implementation Group (IG) we are in. IGs help break down the controls into different levels of complexity and criticality. Higher groups include all the controls of the lower groups, with additional controls being added. There are three IGs and every program starts with IG1. Higher groups become applicable if there are regulations affecting your industry or other obligations, such as with promises made regarding the sensitivity of your data.</p>
+<p>Data classification is going to be the main driving factor in our IG selection at this point. Since we've just got one family's copy of personal and financial data, with no regulated data and no promises made about storing other's data, that puts us squarely in IG group 1.</p>
+<h3 id="implementation-groups-and-data-classification">Implementation Groups and Data Classification</h3>
+<p>IG1
+- Data is low sensitivity
+- Stores unregulated employee and company financial information
+- No regulatory or compliance oversight</p>
+<p>IG2 
+- Stores and processes sensitive client or enterprise information
+- Pockets of regulatory or compliance oversight</p>
+<p>IG3
+- Stores and processes sensitive and confidential data
+- Subject to regulatory and compliance oversight</p>
+<p><em>Taken from: Guide to Implementation Groups (IG) CIS Critical Security Controls v8.1</em></p>
+<p>From looking at these IG control levels in the past, though, I believe there will be room to pick and choose IG2 group controls that make sense for my personal program, will strengthen our security posture in an appropriate way, and deepen my technical understanding and abilities in these additional areas.</p>
+<h3 id="other-cis-ig-considerations">Other CIS IG Considerations</h3>
+<p>Another aspect mentioned by CIS for IG selection is technology. While higher IGs are often leveraging commercial products or custom-built solutions, we'll be using primarily open-source tools that are common for IG1 programs.</p>
+<p>Threat types are another area mentioned during IG selection. We don't expect to be the target of sophisticated, targeted attacks, or industry-specific threats, more commonly related to IG groups two and three. Non-targeted, drive-by style attacks are our most common threat. Again, IG1 will suit us well here. </p>
+<p>I've not gone into every area of IG selection consideration, just the most obvious and applicable ones. For a deeper drive into Implementation Groups, I recommend visiting the CIS pages with more information on this topic, such as <a href="https://www.cisecurity.org/controls/implementation-groups">this one</a>.</p>
+<h2 id="onramp-to-the-controls">Onramp to the Controls</h2>
+<p>I'm going to split devices on my network into two categories:
+- "Business" devices
+- Guest devices</p>
+<p>Business devices are devices that I personally own where I can install monitoring and management software. Guest devices are other devices in my network that I don't own or control, but are still permitted to be there. </p>
+<p>This begins to depart from the language of the CIS documentation, where it only refers to Enterprise devices, and assumes the program has full control over all devices. Initially, CIS doesn't appear to allow for "guest" devices beyond mentioning isolating them. In general, this will be a goal of my approach as well. Ideally, I can have several levels of device segregation. Core network, admin and management devices only. "Business" network with devices that I own and control. Another network for close family and people who I generally trust to maintain their devices in a somewhat reasonable way. Finally, a pure guest network. </p>
+<h2 id="policy-development-and-maintenance">Policy Development and Maintenance</h2>
+<p>Another thing that I notice as I dig into the specific controls and safeguards, is that policies seem to go out the window. Whereas in the more introductory Roadmap and Cost guides they are mentioned repeatedly.</p>
+<p>I think I would like to take a crack at developing and maintain policies as they relate to my personal network and controls. I have experience with this from my current employer, and it's convenient that CIS provides <a href="https://www.cisecurity.org/controls/policy-templates">policy templates</a> to pull from for organization and structure. </p>
+<p>I may find over time that it's too much work, or it's taking away from my core project goal of advancing my technical implementation skills; and if so, then I'll stop. I may also find that it's supportive and helpful to have these guiding principles to refer back to. Who knows?</p>
+<p>I really like the idea of having an LLM-powered cyber security analyst supporting my program. I could develop a routine for the analyst to take stock of configuration changes within the program (or maybe I just have to report them to this "analyst" program), and then can perform independent, automated checks against the policies docs and either recommend configuration or policy adjustments to keep everything aligned. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>That's going to be it for today's session. I made a lot of progress in terms of identifying a controls program and framework to structure my technical implementations around. The Center for Internet Security (CIS) Controls 8.1 won out for that analysis. So far the guides are very approachable and readable. You can tell the program has been mature for a considerable time, and they are continuing to refine the program approach, as wells as provide support research, such as cost estimations and breakdowns, tools recommendations, and the Community Defence Model that showcases the overal effectiveness of the program. </p>
+<p>The Next steps are to identify a tool stack and break out a bunch of subtasks. This <a href="https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1">Cyber Hygiene guide</a> has a bunch of tool recommendations across each control. I'll probably also send the task to Claude to get additional insight into tool recommendations. </p>
+<p>Thanks for reading!</p>
+<p><em>Andrew Antles</em></p>
+      </article>
+    </main>
+
+    <footer class="footer">
+  <p id="copyright">&copy; 2026 AndrewAntles.net</p>
+  <nav class="social-links" aria-label="Social media links">
+    <a href="https://www.linkedin.com/in/andrew-antles" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <img src="../../public/img/company-logos/linkedin/In-Blue-128.png" alt="LinkedIn Logo">
+    </a>
+    <a href="https://github.com/andrewantles" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <img src="../../public/img/company-logos/github/github-mark.png" alt="GitHub Logo">
+    </a>
+  </nav>
+</footer>
+
+  </body>
+</html>

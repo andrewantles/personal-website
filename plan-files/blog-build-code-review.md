@@ -19,5 +19,8 @@ AskClaude:
 Is it not “wrong” to use relative paths? I think as long as they are not being consumed as input anywhere, it’s okay?  
 Same question with format strings.
 
-ToDo - AskClaude:  
+DONE - ToDo - AskClaude:  
 I want alt text for all thumbnails, and all html img tags. Looks like this is completely omitted in the build script.
+
+ToDo:
+Build script needs to NOT build the README.md file in the /src/posts directory

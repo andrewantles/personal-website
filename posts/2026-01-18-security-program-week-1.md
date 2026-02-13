@@ -91,17 +91,9 @@ I really like the idea of having an LLM-powered cyber security analyst supportin
 
 That's going to be it for today's session. I made a lot of progress in terms of identifying a controls program and framework to structure my technical implementations around. The Center for Internet Security (CIS) Controls 8.1 won out for that analysis. So far the guides are very approachable and readable. You can tell the program has been mature for a considerable time, and they are continuing to refine the program approach, as wells as provide support research, such as cost estimations and breakdowns, tools recommendations, and the Community Defence Model that showcases the overal effectiveness of the program. 
 
-The nNext steps are to identify a tool stack and break out a bunch of subtasks. This [Cyber Hygiene guide](
+The Next steps are to identify a tool stack and break out a bunch of subtasks. This [Cyber Hygiene guide](
 https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1) has a bunch of tool recommendations across each control. I'll probably also send the task to Claude to get additional insight into tool recommendations. 
 
 Thanks for reading!
 
-
-# Notes to self
-I need a pipeline where I drop in an MD file like this, and it converts to HTML and deploys as a new page on my blog...
-- should be able to use the `python-markdown` library
-
-I also need a ticketing system like Jira, but something with community support. 
-- Should be able to build it all into GitLab. 
-    - Gitlab Issues or Projects features
-    - Or markdown files in the repo
+*Andrew Antles*

@@ -2,6 +2,7 @@
 title: "CIS Controls Personal Security Program - Week 2"
 date: 2026-01-25
 summary: "Blog preparation, tools research, and other updates."
+thumbnail_alt: "Blog screenshot before changes"
 ---
 
 # Project Mission - north star
@@ -35,10 +36,10 @@ My blog was in somewhat sad shape, so I spun up a Claude Code window to analyze 
 Here are a couple of screenshots showing the before and after. Much improved and much fresher feel if you ask me. Feel free to navigate around and check it out for yourself! [AndrewAntles.Net](https://andrewantles.net)
 
 ### Before
-![Blog screenshot before changes](./week-2-files/before-blog.png)
+![Blog screenshot before changes](./2026-01-25-security-program-week-2-files/before-blog.png)
 
 ### After
-![Blog screenshot after changes](./week-2-files/after-blog.png)
+![Blog screenshot after changes](./2026-01-25-security-program-week-2-files/after-blog.png)
 
 ## Other Progress
 I felt it was important to refresh my blog this week, since it is the front door to this security program content that I'm putting together. That's not to say that I didn't make progress on the overall program. I made several kind of baby steps towards the overall goal, but first:
@@ -91,3 +92,5 @@ Additionally, I gave it a description of my devices, a rough layout of my networ
 Other interesting things I spent time thinking about and learning about this week were AI data centers and Google's TPU chips. I also spent some time watching Andrej Karpathy's [Youtube lecture](https://www.youtube.com/watch?v=kCc8FmEb1nY&list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ&index=7) about how to build ChatGPT from first principles based on the famous and foundational [*Attention is All You Need*](https://arxiv.org/abs/1706.03762) paper. (Karpathy video link in full course playlist)
 
 Until next time!
+
+*Andrew Antles*
