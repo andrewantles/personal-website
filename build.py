@@ -177,6 +177,10 @@ def build_posts(components):
     md = markdown.Markdown(extensions=["fenced_code", "tables", "toc"])
 
     for md_file in sorted(POSTS_DIR.glob("*.md"), reverse=True):
+        # Skip README files
+        if md_file.name.upper() == "README.MD":
+            continue
+
         raw = md_file.read_text()
         meta, body = parse_frontmatter(raw)
 
