@@ -274,12 +274,12 @@ def build_blog_listing(posts_meta, listing_template, components):
         tile = (
             f'<a href="./blog/{post["slug"]}.html" class="post-tile">\n'
             f"  <article>\n"
-            f"{thumb_html}"
             f'    <div class="post-tile-text">\n'
             f'      <time datetime="{post["date"]}">{post["date_display"]}</time>\n'
             f'      <h3>{post["title"]}</h3>\n'
             f'      <p>{post["summary"]}</p>\n'
             f"    </div>\n"
+            f"{thumb_html}"
             f"  </article>\n"
             f"</a>"
         )

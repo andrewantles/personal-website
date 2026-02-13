@@ -6,7 +6,7 @@ author: "Andrew Antles"
 thumbnail_alt: "Blog screenshot before changes"
 ---
 
-# Project Mission - north star
+# Project Mission - North Star
 Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. 
 
 # Documentation

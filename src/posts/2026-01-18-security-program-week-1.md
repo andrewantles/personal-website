@@ -5,7 +5,7 @@ summary: "Program structure selection and CIS Controls review."
 author: "Andrew Antles"
 ---
 
-# Project Mission - north star
+# Project Mission - North Star
 Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. 
 
 # Documentation:
