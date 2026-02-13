@@ -61,7 +61,7 @@ date: 2026-02-01
 summary: "Booting a Raspberry Pi 4 from USB 3.0 for the home security lab."
 ---
 
-# Project Mission - north star
+# Project Mission - North Star
 ...rest of your post...
 ```
 

@@ -2,9 +2,10 @@
 title: "CIS Controls Personal Security Program - Week 1"
 date: 2026-01-18
 summary: "Program structure selection and CIS Controls review."
+author: "Andrew Antles"
 ---
 
-# Project Mission - north star
+# Project Mission - North Star
 Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. 
 
 # Documentation:
@@ -33,6 +34,8 @@ Today, I'm looking at programs for implementing a cyber security program on my p
 I'm looking at various frameworks and standards in an effort to start at a higher level and establish an overal structure. Once various program elements are identified, specific tools, vendors, and devices will be implemented. 
 
 I've decided on the CIS Controls framework, since it goes a bit deeper into technical requirements detail than the NIST CSF, and is freely available, unlike ISO 27001. Bonus points because the CIS guides are nicely formated and easy to work through.
+
+![CIS Controls logo, over teal blue horizontal gradient](./2026-01-18-security-program-week-1/cis-controls.jpg)
 
 I looked briefly at the controls details in NIST publications, SP 800-53 and SP 800-171, but decided against going with these for several reasons. I wanted to stick with something approachable, and applicable, and I felt that these standards were targeted too closely to government and government-adjacent audiences that are dealing with national security type concerns. I feel I can maintain greater momentum on this project going with the more adaptable CIS controls. 
 

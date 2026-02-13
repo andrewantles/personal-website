@@ -199,7 +199,6 @@ def build_posts(components):
         if "<li>" in toc_html:
             toc_block = (
                 '<nav class="toc" aria-label="Table of contents">\n'
-                "  <h2>Outline</h2>\n"
                 f"  {toc_html}\n"
                 "</nav>"
             )
@@ -209,11 +208,13 @@ def build_posts(components):
         title = meta.get("title", md_file.stem)
         date = meta.get("date", "")
         date_display = format_date(date)
+        author = meta.get("author", "Andrew Antles")
 
         page = post_template
         page = page.replace("{{ title }}", title)
         page = page.replace("{{ date }}", date)
         page = page.replace("{{ date_display }}", date_display)
+        page = page.replace("{{ author }}", author)
         page = page.replace("{{ toc }}", toc_block)
         page = page.replace("{{ content }}", html_content)
 
@@ -247,6 +248,7 @@ def build_posts(components):
             "title": title,
             "date": date,
             "date_display": date_display,
+            "author": author,
             "summary": meta.get("summary", ""),
             "slug": md_file.stem,
             "thumbnail": listing_thumbnail,
@@ -272,12 +274,12 @@ def build_blog_listing(posts_meta, listing_template, components):
         tile = (
             f'<a href="./blog/{post["slug"]}.html" class="post-tile">\n'
             f"  <article>\n"
-            f"{thumb_html}"
             f'    <div class="post-tile-text">\n'
             f'      <time datetime="{post["date"]}">{post["date_display"]}</time>\n'
             f'      <h3>{post["title"]}</h3>\n'
             f'      <p>{post["summary"]}</p>\n'
             f"    </div>\n"
+            f"{thumb_html}"
             f"  </article>\n"
             f"</a>"
         )

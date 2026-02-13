@@ -2,6 +2,7 @@
 title: "Machine Learning Crash Course, Let's Play"
 date: 2024-03-01
 summary: "Diving into the Machine Learning Crash Course from Google."
+author: "Andrew Antles"
 thumbnail_alt: "Version history of the private Colab notebook showing an update two days ago"
 ---
 
