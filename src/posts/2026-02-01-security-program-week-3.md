@@ -65,7 +65,8 @@ As fun as it sounds, it's not going to be an appropriate use of time to get into
 ## Net Connect
 
 The other step I was able to take this was to confirm SSH access. During the OS imaging step, there was an option to specify a public key for certificate-based authentication to the Pi - so I generated a key pair and plugged one in. Now that I'm booted, I set the IP addresses of my terminal machine and the Pi to an arbitrary private subnet, and made my terminal machine the gateway of the subnet. After connecting both Network Interface Cards (NIC)s with an Ethernet cable, I was able to connect via SSH and control the Pi through a Terminal process using the private key stored on my terminal machine. This will come in handy for remote administration over the local network. I made sure and set a passphrase on the private key so that it couldn't be used if it was ever stolen. 
-- Is the gateway step really necessary?
+
+![terminal view of SSH connectin](./2026-02-01-security-program-week-3-files/rasp4b-ssh-connect-successful.png)
 
 ## Wrap Up
 
