@@ -1,9 +1,9 @@
 ---
 title: "First Half of Feb 2026"
 date: 2026-02-16
-summary: "REPLACE"
+summary: "Learning about the Positive Intelligence concept by Shirzad Chamine"
 author: "Andrew Antles"
-thumbnail_alt: "REPLACE"
+thumbnail_alt: "Spokane Cyber Cup career panel"
 ---
 
 Well, it's another week of slow project progress. But, I'm actually feeling surprisingly good about some personal progress that's happening right now. I'm hyped about some realizations and growth I'm experiencing stemming from Shirzad Chamine's book [*Positive Intelligence*](https://greenleafbookgroup.com/titles/positive-intelligence). I'm excited to talk about this in a bit. 
