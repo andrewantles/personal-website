@@ -4,6 +4,7 @@ date: 2026-03-01
 summary: "Setting up first tooling on new security node"
 author: "Andrew Antles"
 thumbnail_alt: "[TODO]"
+unlisted: true
 ---
 
 # Project Mission - North Star

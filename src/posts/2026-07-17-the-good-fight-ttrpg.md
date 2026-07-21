@@ -5,7 +5,9 @@ summary: "Adapting my solo TTRPG into a browser game, and the AI coding workflow
 author: "Andrew Antles"
 ---
 
-Wrote a single player mini-TTRPG, but didn't have a big player base, nor a lot of time to repeatedly playtest. Initial results were promising and provided the right "grind-y" feeling and the correct "pressure" on the player to act and adapt. I needed more though. I decided to launch a project to adapt my game into one that can be played in the browser. I also dreamt up a simulation component where I could run batches of games and analyze the turns and outcomes to achieve greater balance and potential enjoyment of the game.
+![stock-photo-resistance](./2026-07-17-the-good-fight-ttrpg-files/pexels-tima-miroshnichenko-7203908.jpg)
+
+I wrote a single player mini-TTRPG, but didn't have a big player base, nor a lot of time to repeatedly playtest. Initial results were promising and provided the right "grind-y" feeling and the correct "pressure" on the player to act and adapt. I needed more though. I decided to launch a project to adapt my game into one that can be played in the browser. I also dreamt up a simulation component where I could run batches of games and analyze the turns and outcomes to achieve greater balance and potential enjoyment of the game.
 
 Original inspiration was received when reading the second half of the James S. A. Corey *The Expanse* series. I don't want to give too much away if you haven't read it, because it's a fantastic series that builds on itself beautifully, but at some point an authoritarian-type regime is in power over the communities that our heroes find themselves in. There's much development of a resistance and the drama and intrigue that comes along with that. I thought to myself, *Man, I'd like to find a game or something where I could experience some of this risk-taking and high-stakes decision making in a tricky context like this!* Alas, I couldn't find anything that matches the feeling of what I was hoping for, neither in digital nor table-type games. So, I decided to make one myself! Enter *The Good Fight Mini-TTRPG (Solo)*.
 
@@ -25,5 +27,5 @@ I will say, I stopped auditing every line of code. I'm a dad, and it's just not 
 
 To get a look at the latest version of Matt Pocock's skills, he maintains them on his GitHub: https://github.com/mattpocock/skills. He also has a series of free and paid courses that offer, linked from his GitHub as well. I'll be continuing to work with his approach on additional personal projects, and have already had boosted success at work implementing these principles!
 
-Thanks for reading. If you stuck with me this long, I suppose I should post a link to the game so you can try it out. It's here!: [NEED LINK BEFORE POSTING] Get in touch with me through one of my socials if you have any feedback or comments!
+Thanks for reading. If you stuck with me this long, I suppose I should post a link to the game so you can try it out. [It's here!](https://ttrpg.andrewantles.net/) Get in touch with me through one of my socials if you have any feedback or comments!
 
