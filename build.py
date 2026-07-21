@@ -244,6 +244,11 @@ def build_posts(components):
         if not thumbnail_alt and listing_thumbnail:
             thumbnail_alt = f"Thumbnail for: {title}"
 
+        # Posts marked `unlisted: true` still get a standalone page above,
+        # but are omitted here so they never appear as a blog listing tile.
+        if meta.get("unlisted", "").lower() == "true":
+            continue
+
         posts_meta.append({
             "title": title,
             "date": date,

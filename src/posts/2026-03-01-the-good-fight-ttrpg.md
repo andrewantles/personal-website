@@ -7,7 +7,7 @@ thumbnail_alt: ""
 ---
 
 # Notes:
-I've decided to review each line of code for several reasons, even though I know this is slowing me down considerably. Now, in the competitive world of augmented software development, time is money, and I can't afford to review every little line - that's what the coding assistant is there for. However, I'm able to drag several critical experiences and personal development opportunities out of this exersice. I'm understanding and exploring:
+I've decided to review each line of code for several reasons, even though I know this is slowing me down considerably. Now, in the competitive world of augmented software development, time is money, and I can't afford to review every little line - that's what the coding assistant is there for. However, I'm able to drag several critical experiences and personal development opportunities out of this exersize. I'm understanding and exploring:
 - TDD
 - Data science, simulation, data gathering, feature engineering, etc. 
 - Game design and general OOP program architecture
