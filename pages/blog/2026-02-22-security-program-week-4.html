@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CIS Controls Personal Security Program - Week 4 - AndrewAntles.Net</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../public/style.css">
+  </head>
+  <body>
+    <div class="header">
+  <img id="header-pic" src="../../public/img/profile.jpg" alt="Profile picture headshot of Andrew Antles">
+  <h1 id="header-text">AndrewAntles.Net</h1>
+</div>
+
+    <div class="menu-container">
+  <div class="menu">
+    <span><a href="../../pages/blog.html">Blog</a></span>
+    <span><a href="../../pages/resume.html">Resume</a></span>
+    <span><a href="../../pages/about.html">About</a></span>
+  </div>
+</div>
+
+
+    <main class="page-content">
+      <article class="blog-post">
+        <p class="post-meta">
+          <time datetime="2026-03-01">March 1, 2026</time> by <span class="author">Andrew Antles</span>
+        </p>
+        <nav class="toc" aria-label="Table of contents">
+  <div class="toc">
+<ul>
+<li><a href="#project-mission-north-star">Project Mission - North Star</a></li>
+<li><a href="#documentation">Documentation</a><ul>
+<li><a href="#additional-framework-history">Additional Framework History:</a></li>
+<li><a href="#tools-and-implemenation-support">Tools and Implemenation Support</a></li>
+</ul>
+</li>
+<li><a href="#time-tracking">Time Tracking:</a></li>
+<li><a href="#narative">Narative</a></li>
+<li><a href="#install-and-login">Install and Login</a></li>
+<li><a href="#first-look">First Look</a><ul>
+<li><a href="#settings-tweaks">Settings Tweaks</a></li>
+<li><a href="#additional-setup">Additional Setup</a></li>
+<li><a href="#another-thing">Another thing</a></li>
+<li><a href="#freeform-notes">Freeform notes:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+</nav>
+        <h1 id="project-mission-north-star">Project Mission - North Star</h1>
+<p>Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. </p>
+<h1 id="documentation">Documentation</h1>
+<h2 id="additional-framework-history">Additional Framework History:</h2>
+<ul>
+<li>https://learn.cisecurity.org/CIS-Controls-v8-guide-pdf</li>
+<li>https://learn.cisecurity.org/cis-controls-v8-1-guide-pdf</li>
+</ul>
+<h2 id="tools-and-implemenation-support">Tools and Implemenation Support</h2>
+<ul>
+<li>https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1</li>
+</ul>
+<h1 id="time-tracking">Time Tracking:</h1>
+<table>
+<thead>
+<tr>
+<th>start</th>
+<th>end</th>
+<th>color</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:00</td>
+<td>08:30</td>
+<td>OG</td>
+<td>Off-and-on looking at tooling</td>
+</tr>
+<tr>
+<td>08:30</td>
+<td>09:15</td>
+<td>OG</td>
+<td>Starting blog page, getting tooling options gathered, beginning analysis.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>start</th>
+<th>end</th>
+<th>color</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>08:00</td>
+<td></td>
+<td>G</td>
+<td>Tooling options review and catch-up</td>
+</tr>
+</tbody>
+</table>
+<h1 id="narative">Narative</h1>
+<p>The goal for today was to setup network inventorying and basic monitoring. </p>
+<p>I took a quick scan through my trusty CIS Hygiene Guide, and identified two quick options: Open-AudIT, and Nmap. I also a looked back at a few research tasks I had Claude run several weeks back.</p>
+<p>Altogether, I was looking at the following options:
+- Nmap
+- Open-AudIT
+- Netbox
+- Snipe-IT</p>
+<p>I wasn't really happy with these though. The non-Nmap solutions were all geared toward an IT-type inventory system, and I need more than that. I need something that can perform analysis and monitoring. Something where I can get some activity baselines. And, something that can act as a network activity source for feeding to a SIEM or analysis platform later.</p>
+<p>I sent Claude off on another research task with refined requirements while I took a shower and made coffee. The result was clear and matched a previous look that I'd taking into this in the past: ntopng. </p>
+<p>ntop is a European company, and what started out as an open-source network monitoring program, is now offered with enterprise support and on purpose-built hardware. The company's <a href="https://www.ntop.org/about-us/the-company/">About Us</a> page was very reassuring, and with the product's maturity and range of security-minded features, I was ready to take the plunge. </p>
+<p>The next thing I confirmed was whether I could interact with ntop via CLI or API. I need to be able to script automations and interact via LLM agent. Thankfully, the <a href="https://www.ntop.org/guides/ntopng/api/index.html">API documentation</a> offered what appears to be a fairly robust setup.</p>
+<p>I'd considered using Nmap scans running on a schedule, but it's just too much for me to try to manage at the moment. With so many variables, I just need to keep this program moving along. It's not that Nmap scans are hard to schedule and run. It's moreso the engineering that goes along with developing an network inventory system based on Nmap. I would have to establish storage after evaluating options (probably SQLite or similar to start), and then develop logic for maintaining, updating, and adding entries to the storage. This brings along with ot debugging and monitoring to confirm everything is running as expected, error checking, bug squashing, etc. I really just need this thing to run right now. So, after finding a package like ntop that felt pretty comfortable with and excited about, it was definitely the right move to maintain momentum early in the program. Finally, a system based on scheduled Nmap scans wouldn't give me the network activity metrics per-device. </p>
+<h1 id="install-and-login">Install and Login</h1>
+<p>The install went <a href="https://www.ntop.org/support/documentation/software-installation/">as advertised</a>, and before long, I was looking at a login page for ntop. As a reminder, I'm running this on a Raspberry Pi 4B. </p>
+<p><strong>INSERT LOGIN SCREEN IMAGE</strong></p>
+<p>A few things I noticed right away: No TLS. Accessible from anywhere on the same subnet. </p>
+<p>The default credentials weren't a problem, because it prompted me to update those at first login, but that doesn't do me a lot of good if I have a local attacker listening for credentials sent in plaintext. I also don't have a management VLAN setup (yet, perhaps later), so I'm not thrilled that it defaults to open HTTP access. </p>
+<p>Two actions items added...</p>
+<h1 id="first-look">First Look</h1>
+<p>Overall, I'm quite pleased with the layout and the information provided. They definitely hit the mark with the colorful dashboards. It also seems to be detecting some of my network host without any setup or configuration. I'm feeling hopeful.</p>
+<p><strong>SCREENSHOT OF DASHBOARD</strong> </p>
+<h2 id="settings-tweaks">Settings Tweaks</h2>
+<p>Don't need 12 hour sessions.
+There is support for centralized authentication, as opposed to locally managed users/passwords. 
+Set everything to monitor by MAC address since IPs are dynamically assigns via DHCP.
+Kicked off the first network discovery scan.</p>
+<h2 id="additional-setup">Additional Setup</h2>
+<p>Logging into my switch to configure the mirror port, I find that it also does not have TLS enabled on it's web interface. If I can't get all of these talking with certificate pairs, I'm going to need to look hard at setting up a management VLAN. The main barrier to entry here is that I'm most likely looking at a switch upgrade since my 8-port is just about maxed out. </p>
+<p>I logged into my router gateway, which also happens to be my DHCP server, and established static IPs for the switch and the Raspberry Pi. These are the main two management devices that I need to be able to know where they are at all times. </p>
+<h2 id="another-thing">Another thing</h2>
+<p>Another thing that came up as I dug through the various tooling recommendations was that I would like to encrypt the drive on my Pi. That way, even if it was tampered with or stolen, it would have that layer of protection. This would help mitigate a concern I raised in the Week 3 [<strong>NEED LINK</strong>] blog post regarding locking down the boot options. In the case that an adversary booted the Pi to another boot device, the storage would be encrypted and inaccessible. This helps in the event of downright theft of the Pi as well. </p>
+<h2 id="freeform-notes">Freeform notes:</h2>
+<ul>
+<li>Hygeine guide only covers CIS Implementation Group 1 (out of 3). </li>
+<li>Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory<ul>
+<li>records the network address (if static), hardware address, machine name, enterprise asset owner, department for each asset, and whether the asset has been approved to connect</li>
+<li>Review and update the inventory of all enterprise assets bi-annually, or more frequently</li>
+</ul>
+</li>
+</ul>
+<p>ntopng is the tool we're going with. Now weighing installation options - binary or container</p>
+<p>Nothing weird about the company</p>
+<p>In an effort to get up and running quickly, I'm deciding to eschew the use of containers due to the added complexity, summarized here: https://www.ntop.org/best-practices-for-using-ntop-tools-on-containers/. </p>
+<p>Action items:
+* Set up TLS on ntop
+* Lock down the HTTP access to ntop - either restricted to locally, or from just my laptop via static IP
+    - Configured at: <strong>Preferences &gt; User Interface &gt; Access Control List</strong></p>
+      </article>
+    </main>
+
+    <footer class="footer">
+  <p id="copyright">&copy; 2026 AndrewAntles.net</p>
+  <nav class="social-links" aria-label="Social media links">
+    <a href="https://www.linkedin.com/in/andrew-antles" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+      <img src="../../public/img/company-logos/linkedin/In-Blue-128.png" alt="LinkedIn Logo">
+    </a>
+    <a href="https://github.com/andrewantles" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+      <img src="../../public/img/company-logos/github/github-mark.png" alt="GitHub Logo">
+    </a>
+  </nav>
+</footer>
+
+  </body>
+</html>

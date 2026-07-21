@@ -64,6 +64,7 @@ Watch mode polls every 1 second for changes in `src/` (including posts). Press `
    summary: "A short description for the blog post listing page."
    author: "Author Name"  # Optional, defaults to "Andrew Antles"
    thumbnail_alt: "Alt text for first image in the blog post, which will be used as post listing tile thumbnail."
+   unlisted: "true"  # Optional. Still builds a standalone page, but omits it from the blog listing tiles.
    ---
    ```
 
