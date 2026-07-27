@@ -14,24 +14,14 @@ Challenge and deepen my security engineering skills by deploying and running the
 ## Additional Framework History:
 - https://learn.cisecurity.org/CIS-Controls-v8-guide-pdf
 - https://learn.cisecurity.org/cis-controls-v8-1-guide-pdf
-## Tools and Implemenation Support
+## Tools and Implementation Support
 - https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1
 
-# Time Tracking:
-|start|end|color|desc|
-|-|-|-|-|
-|08:00|08:30|OG|Off-and-on looking at tooling|
-|08:30|09:15|OG|Starting blog page, getting tooling options gathered, beginning analysis.
-
-|start|end|color|desc|
-|-|-|-|-|
-|08:00||G|Tooling options review and catch-up
-
-# Narative
+# Narrative
 
 The goal for today was to setup network inventorying and basic monitoring. 
 
-I took a quick scan through my trusty CIS Hygiene Guide, and identified two quick options: Open-AudIT, and Nmap. I also a looked back at a few research tasks I had Claude run several weeks back.
+I took a quick scan through my trusty CIS Hygiene Guide, and identified two quick options: Open-AudIT, and Nmap. I also looked back at a few research tasks I had Claude run several weeks back.
 
 Altogether, I was looking at the following options:
 - Nmap
@@ -41,13 +31,13 @@ Altogether, I was looking at the following options:
 
 I wasn't really happy with these though. The non-Nmap solutions were all geared toward an IT-type inventory system, and I need more than that. I need something that can perform analysis and monitoring. Something where I can get some activity baselines. And, something that can act as a network activity source for feeding to a SIEM or analysis platform later.
 
-I sent Claude off on another research task with refined requirements while I took a shower and made coffee. The result was clear and matched a previous look that I'd taking into this in the past: ntopng. 
+I sent Claude off on another research task with refined requirements while I took a shower and made coffee. The result was clear and matched a previous look that I'd taken into this in the past: ntopng. 
 
 ntop is a European company, and what started out as an open-source network monitoring program, is now offered with enterprise support and on purpose-built hardware. The company's [About Us](https://www.ntop.org/about-us/the-company/) page was very reassuring, and with the product's maturity and range of security-minded features, I was ready to take the plunge. 
 
 The next thing I confirmed was whether I could interact with ntop via CLI or API. I need to be able to script automations and interact via LLM agent. Thankfully, the [API documentation](https://www.ntop.org/guides/ntopng/api/index.html) offered what appears to be a fairly robust setup.
 
-I'd considered using Nmap scans running on a schedule, but it's just too much for me to try to manage at the moment. With so many variables, I just need to keep this program moving along. It's not that Nmap scans are hard to schedule and run. It's moreso the engineering that goes along with developing an network inventory system based on Nmap. I would have to establish storage after evaluating options (probably SQLite or similar to start), and then develop logic for maintaining, updating, and adding entries to the storage. This brings along with ot debugging and monitoring to confirm everything is running as expected, error checking, bug squashing, etc. I really just need this thing to run right now. So, after finding a package like ntop that felt pretty comfortable with and excited about, it was definitely the right move to maintain momentum early in the program. Finally, a system based on scheduled Nmap scans wouldn't give me the network activity metrics per-device. 
+I'd considered using Nmap scans running on a schedule, but it's just too much for me to try to manage at the moment. With so many variables, I just need to keep this program moving along. It's not that Nmap scans are hard to schedule and run. It's moreso the engineering that goes along with developing a network inventory system based on Nmap. I would have to establish storage after evaluating options (probably SQLite or similar to start), and then develop logic for maintaining, updating, and adding entries to the storage. This brings along with it debugging and monitoring to confirm everything is running as expected, error checking, bug squashing, etc. I really just need this thing to run right now. So, after finding a package like ntop that I felt pretty comfortable with and excited about, it was definitely the right move to maintain momentum early in the program. Finally, a system based on scheduled Nmap scans wouldn't give me the network activity metrics per-device. 
 
 # Install and Login
 
@@ -63,20 +53,20 @@ Two actions items added...
 
 # First Look
 
-Overall, I'm quite pleased with the layout and the information provided. They definitely hit the mark with the colorful dashboards. It also seems to be detecting some of my network host without any setup or configuration. I'm feeling hopeful.
+Overall, I'm quite pleased with the layout and the information provided. They definitely hit the mark with the colorful dashboards. It also seems to be detecting some of my network hosts without any setup or configuration. I'm feeling hopeful.
 
 **SCREENSHOT OF DASHBOARD** 
 
 
 ## Settings Tweaks
 
-Don't need 12 hour sessions.
-There is support for centralized authentication, as opposed to locally managed users/passwords. 
-Set everything to monitor by MAC address since IPs are dynamically assigns via DHCP.
-Kicked off the first network discovery scan.
+- Don't need 12 hour sessions.
+- There is support for centralized authentication, as opposed to locally managed users/passwords. 
+- Set everything to monitor by MAC address since IPs are dynamically assigned via DHCP.
+- Kicked off the first network discovery scan.
 
 ## Additional Setup
-Logging into my switch to configure the mirror port, I find that it also does not have TLS enabled on it's web interface. If I can't get all of these talking with certificate pairs, I'm going to need to look hard at setting up a management VLAN. The main barrier to entry here is that I'm most likely looking at a switch upgrade since my 8-port is just about maxed out. 
+Logging into my switch to configure the mirror port, I find that it also does not have TLS enabled on its web interface. If I can't get all of these talking with certificate pairs, I'm going to need to look hard at setting up a management VLAN. The main barrier to entry here is that I'm most likely looking at a switch upgrade since my 8-port is just about maxed out. 
 
 I logged into my router gateway, which also happens to be my DHCP server, and established static IPs for the switch and the Raspberry Pi. These are the main two management devices that I need to be able to know where they are at all times. 
 
@@ -87,7 +77,7 @@ Another thing that came up as I dug through the various tooling recommendations 
 
 
 ## Freeform notes:
-- Hygeine guide only covers CIS Implementation Group 1 (out of 3). 
+- Hygiene guide only covers CIS Implementation Group 1 (out of 3). 
 - Safeguard 1.1: Establish and Maintain Detailed Enterprise Asset Inventory
     - records the network address (if static), hardware address, machine name, enterprise asset owner, department for each asset, and whether the asset has been approved to connect
     - Review and update the inventory of all enterprise assets bi-annually, or more frequently

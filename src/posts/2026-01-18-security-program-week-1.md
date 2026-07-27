@@ -20,7 +20,7 @@ Challenge and deepen my security engineering skills by deploying and running the
 ## CIS Policy Templates
 - https://www.cisecurity.org/controls/policy-templates
 
-## Tools and Implemenation Support
+## Tools and Implementation Support
 - https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1
 - https://www.cisecurity.org/advisory
 - https://www.cisecurity.org/controls/resources?crc=environment-specific-guidance
@@ -31,18 +31,18 @@ Challenge and deepen my security engineering skills by deploying and running the
 ## Program Selection
 Today, I'm looking at programs for implementing a cyber security program on my personal network. I want to deepen my security engineering skills, so I thought it would be fun and interesting to build out a personal security program and run it. 
 
-I'm looking at various frameworks and standards in an effort to start at a higher level and establish an overal structure. Once various program elements are identified, specific tools, vendors, and devices will be implemented. 
+I'm looking at various frameworks and standards in an effort to start at a higher level and establish an overall structure. Once various program elements are identified, specific tools, vendors, and devices will be implemented. 
 
-I've decided on the CIS Controls framework, since it goes a bit deeper into technical requirements detail than the NIST CSF, and is freely available, unlike ISO 27001. Bonus points because the CIS guides are nicely formated and easy to work through.
+I've decided on the CIS Controls framework, since it goes a bit deeper into technical requirements detail than the NIST CSF, and is freely available, unlike ISO 27001. Bonus points because the CIS guides are nicely formatted and easy to work through.
 
 ![CIS Controls logo, over teal blue horizontal gradient](./2026-01-18-security-program-week-1/cis-controls.jpg)
 
 I looked briefly at the controls details in NIST publications, SP 800-53 and SP 800-171, but decided against going with these for several reasons. I wanted to stick with something approachable, and applicable, and I felt that these standards were targeted too closely to government and government-adjacent audiences that are dealing with national security type concerns. I feel I can maintain greater momentum on this project going with the more adaptable CIS controls. 
 
 ## CIS Implementation Groups
-One of the first step in CIS is to identify the Implementation Group (IG) we are in. IGs help break down the controls into different levels of complexity and criticality. Higher groups include all the controls of the lower groups, with additional controls being added. There are three IGs and every program starts with IG1. Higher groups become applicable if there are regulations affecting your industry or other obligations, such as with promises made regarding the sensitivity of your data.
+One of the first steps in CIS is to identify the Implementation Group (IG) we are in. IGs help break down the controls into different levels of complexity and criticality. Higher groups include all the controls of the lower groups, with additional controls being added. There are three IGs and every program starts with IG1. Higher groups become applicable if there are regulations affecting your industry or other obligations, such as with promises made regarding the sensitivity of your data.
 
-Data classification is going to be the main driving factor in our IG selection at this point. Since we've just got one family's copy of personal and financial data, with no regulated data and no promises made about storing other's data, that puts us squarely in IG group 1.
+Data classification is going to be the main driving factor in our IG selection at this point. Since we've just got one family's copy of personal and financial data, with no regulated data and no promises made about storing others' data, that puts us squarely in IG group 1.
 
 ### Implementation Groups and Data Classification 
 IG1
@@ -92,9 +92,9 @@ I really like the idea of having an LLM-powered cyber security analyst supportin
 
 ## Conclusion
 
-That's going to be it for today's session. I made a lot of progress in terms of identifying a controls program and framework to structure my technical implementations around. The Center for Internet Security (CIS) Controls 8.1 won out for that analysis. So far the guides are very approachable and readable. You can tell the program has been mature for a considerable time, and they are continuing to refine the program approach, as wells as provide support research, such as cost estimations and breakdowns, tools recommendations, and the Community Defence Model that showcases the overal effectiveness of the program. 
+That's going to be it for today's session. I made a lot of progress in terms of identifying a controls program and framework to structure my technical implementations around. The Center for Internet Security (CIS) Controls 8.1 won out for that analysis. So far the guides are very approachable and readable. You can tell the program has been mature for a considerable time, and they are continuing to refine the program approach, as well as provide support research, such as cost estimations and breakdowns, tools recommendations, and the Community Defence Model that showcases the overall effectiveness of the program. 
 
-The Next steps are to identify a tool stack and break out a bunch of subtasks. This [Cyber Hygiene guide](
+The next steps are to identify a tool stack and break out a bunch of subtasks. This [Cyber Hygiene guide](
 https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1) has a bunch of tool recommendations across each control. I'll probably also send the task to Claude to get additional insight into tool recommendations. 
 
 Thanks for reading!

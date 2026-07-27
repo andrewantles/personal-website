@@ -9,20 +9,9 @@ thumbnail_alt: "Raspberry Pi Imager software storage selection screen"
 # Project Mission - North Star
 Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. 
 
-# Time Tracking:
-|start|end|color|desc|
-|-|-|-|-|
-|10:45|11:15|O|Reading Anthropic materials, looking at calendars, messages from other recruiters.|
-|11:15|11:30|G|Finalized scheduling 2x recruiter screens, coffee refill and potty break|
-|11:30|11:45|O|Burn family responsibilities, laundry, etc.|
-|11:45|12:00|O|Update blog to-do on GitHub, sync files, updates between local and cloud.|
-|12:00|12:45|O|RPi 4b USB 3.0 boot work, blogging|
-|12:45||G|Bathroom break, First look at booted RPi. (not working)|
+# Narrative
 
-
-# Narative
-
-I ended getting sick this week, and still not feeling great today, so only have a little bit of time to get this rolling. Thank all that is good and holy for espresso :)
+I ended up getting sick this week, and still not feeling great today, so only have a little bit of time to get this rolling. Thank all that is good and holy for espresso :)
 
 Diving right in, I've got a Raspberry Pi 4 model b, and I've had issues in the past with SD cards failing. This time around, I'd like to try booting from USB 3.0. So I do two things. I drop a well-thought out prompt into Opus 4.5 with Research enabled, and I start searching the web for quality resources. 
 
@@ -34,10 +23,10 @@ The ["Getting Started" documentation](https://www.raspberrypi.com/documentation/
 
 ![pi-imager-storage-selection](./2026-02-01-security-program-week-3-files/pi-imager-storage-selection.png)
 
-I decided to grab a copy of the latst version of the software and install it locally for a closer look. Figuring I didn't have much time today with not feeling well, I just went for it and had the software write a standard 64-bit Raspberry Pi OS image to my USB drive. I let it spin while I dug deeped into the documentation. Perfect is the enemy of good. At this stage, it's better to fire a few bullets and run a few tests to get some initial feedback right away, versus researching and understanding the entire domain and developing a "perfect" action plan. I knew this was a good direction becuase I already watched myself looking at the USB drive partitions using CLI tools, and while it's very interesting and I'd love to do a deep dive into firmware flashing and drive partitions, etc., I knew that wasn't the most direct line to my northstar goal for this project. 
+I decided to grab a copy of the latest version of the software and install it locally for a closer look. Figuring I didn't have much time today with not feeling well, I just went for it and had the software write a standard 64-bit Raspberry Pi OS image to my USB drive. I let it spin while I dug deeper into the documentation. Perfect is the enemy of good. At this stage, it's better to fire a few bullets and run a few tests to get some initial feedback right away, versus researching and understanding the entire domain and developing a "perfect" action plan. I knew this was a good direction because I already watched myself looking at the USB drive partitions using CLI tools, and while it's very interesting and I'd love to do a deep dive into firmware flashing and drive partitions, etc., I knew that wasn't the most direct line to my northstar goal for this project. 
 
 
-What do you know? By the time I finised writing this last paragraph, the imaging software is already complete. Time to jam it into the Pi and see what feedback we get!
+What do you know? By the time I finished writing this last paragraph, the imaging software is already complete. Time to jam it into the Pi and see what feedback we get!
 
 What do you know, again? It booted right up. On the one hand, I'm a bit sad there's not time to dig into firmware and drive partition analysis and debugging, but on the other hand, I'm one step closer to my project's primary goal with a lot less stress and effort than I was expecting. I'll take it!
 
@@ -47,7 +36,7 @@ The only consideration I want to take at this point is whether I invited any pro
 
 ## Still Some Fun
 
-The good news was that Claude Opus had completed churning out it's report. So, while I wasn't going to validate every source, I still had a good time reading about a few things. It turns out that any firmware version about 2021 or later already has a boot order set that looks for a USB drive to boot from is an SD card is not present. The OS must update the firmware when it first runs, because my firmware version is from 2025, and I have not even had this Pi connected to the Internet in at least a couple years.
+The good news was that Claude Opus had completed churning out its report. So, while I wasn't going to validate every source, I still had a good time reading about a few things. It turns out that any firmware version about 2021 or later already has a boot order set that looks for a USB drive to boot from if an SD card is not present. The OS must update the firmware when it first runs, because my firmware version is from 2025, and I have not even had this Pi connected to the Internet in at least a couple years.
 
 The guide from Opus also mentions some performance issues when using USB thumb drives, and I am definitely experiencing these. A lot of things seem snappy and quick once loaded, but there are definitely some hangs and delays. 
 
@@ -64,9 +53,9 @@ As fun as it sounds, it's not going to be an appropriate use of time to get into
 
 ## Net Connect
 
-The other step I was able to take this was to confirm SSH access. During the OS imaging step, there was an option to specify a public key for certificate-based authentication to the Pi - so I generated a key pair and plugged one in. Now that I'm booted, I set the IP addresses of my terminal machine and the Pi to an arbitrary private subnet, and made my terminal machine the gateway of the subnet. After connecting both Network Interface Cards (NIC)s with an Ethernet cable, I was able to connect via SSH and control the Pi through a Terminal process using the private key stored on my terminal machine. This will come in handy for remote administration over the local network. I made sure and set a passphrase on the private key so that it couldn't be used if it was ever stolen. 
+The other step I was able to take this week was to confirm SSH access. During the OS imaging step, there was an option to specify a public key for certificate-based authentication to the Pi - so I generated a key pair and plugged one in. Now that I'm booted, I set the IP addresses of my terminal machine and the Pi to an arbitrary private subnet, and made my terminal machine the gateway of the subnet. After connecting both Network Interface Cards (NIC) with an Ethernet cable, I was able to connect via SSH and control the Pi through a Terminal process using the private key stored on my terminal machine. This will come in handy for remote administration over the local network. I made sure and set a passphrase on the private key so that it couldn't be used if it was ever stolen. 
 
-![terminal view of SSH connectin](./2026-02-01-security-program-week-3-files/rasp4b-ssh-connect-successful.png)
+![terminal view of SSH connection](./2026-02-01-security-program-week-3-files/rasp4b-ssh-connect-successful.png)
 
 ## Wrap Up
 

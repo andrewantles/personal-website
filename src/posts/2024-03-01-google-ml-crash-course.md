@@ -9,7 +9,7 @@ thumbnail_alt: "Version history of the private Colab notebook showing an update 
 <h2>Machine Learning Crash Course, Let's Play</h2>
 <p>I've been working through the <a href="https://developers.google.com/machine-learning/crash-course">Machine Learning Crash Course</a> from Google. I'm really happy with it, despite not generally trusting Google or its products. In fact, there are several resources in this ML section of their Developer's website that look really interesting to go through. Some more general guidance pieces, and some shorter, more <a href="https://developers.google.com/machine-learning/advanced-courses">hands-on courses</a> that dive deeper into specific algorithms. Anyway, I thought I'd write a bit about my experience with it here.</p>
 
-<p>For those that haven't looked at the course yet, it's supposed to take about 15 hours, and features short lecture videos from ML developers at Google. Each video has a written, article-like page that covers the content in the video. I think they scripted the videos based of the content on the written pages because the content is generally exactly the same. The best part of all, though, are the hands-on programming exercises!</p>
+<p>For those that haven't looked at the course yet, it's supposed to take about 15 hours, and features short lecture videos from ML developers at Google. Each video has a written, article-like page that covers the content in the video. I think they scripted the videos based on the content on the written pages because the content is generally exactly the same. The best part of all, though, are the hands-on programming exercises!</p>
 
 <p>The hands-on programming exercises occur on <a href="https://colab.google/">Google's Colaboratory</a> platform in pre-written notebooks. The notebooks so far provide some setup and explanation, explaining any concepts or code that are being set up, and have ended with exercises, referred to as "tasks."</p>
 
@@ -45,7 +45,7 @@ print(my_list) # Prints [99]
 
 <p>Here's <a href="https://github.com/google/eng-edu/commit/3c0f5037331cbc937a5edda7efeb0b63d7f80695">the link</a> to the GitHub commit associated with this change:</p>
 
-<p><img src="../2024-03-01-google-ml-crash-course/commit.png" alt="Screenshot of the commit associated to the above change"></p>
+<p><img src="../2024-03-01-google-ml-crash-course/commit.png" alt="Screenshot of the commit associated with the above change"></p>
 
 <p>I found this validating that I had discovered the correct fix to this issue, but also a little unnerving. Does Google really have such good monitoring and capability to execute that almost immediately after this error fired they were able to allocate a resource to address it? O_o Unlikely, but would be such a strange coincidence on the timing otherwise...</p>
 

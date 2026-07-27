@@ -3,9 +3,10 @@ title: "Building The Good Fight: Lessons from an AI-Assisted Project"
 date: 2026-07-17
 summary: "Adapting my solo TTRPG into a browser game, and the AI coding workflow that finally got it shipped."
 author: "Andrew Antles"
+thumbnail_alt: "Stock photo of raised fists by Tima Miroshnichenko"
 ---
 
-![stock-photo-resistance](./2026-07-17-the-good-fight-ttrpg-files/pexels-tima-miroshnichenko-7203908.jpg)
+![stock-photo-of-raised-fists-by-tima-miroshnichenko](./2026-07-17-the-good-fight-ttrpg-files/pexels-tima-miroshnichenko-7203908.jpg)
 
 I wrote a single player mini-TTRPG, but didn't have a big player base, nor a lot of time to repeatedly playtest. Initial results were promising and provided the right "grind-y" feeling and the correct "pressure" on the player to act and adapt. I needed more though. I decided to launch a project to adapt my game into one that can be played in the browser. I also dreamt up a simulation component where I could run batches of games and analyze the turns and outcomes to achieve greater balance and potential enjoyment of the game.
 
@@ -25,7 +26,10 @@ Matt's `/to-tickets` skill references a `/tdd` skill that I found really helpful
 
 I will say, I stopped auditing every line of code. I'm a dad, and it's just not realistic. This is essentially a static webpage that runs JavaScript in a browser sandbox. There's not a lot to exploit here, and the risk profile is really low. Everything ended up being done in vanilla JavaScript, so no supply chain risk. (I will say, the UI is pretty bad. It's that weird navy/gold Claude default UI. I did not choose to spend cycles on the UI for this project. I chose to just let it be...). The only libraries needed are for the test harnesses, and this thing is running in an Anthropic-hosted sandbox 90% of the time, so again, virtually no risk. (Yes, I sit and watch every command when I need to work on my local machine. I built an agentic sandbox harness at work, but haven't taken the time yet to deploy it locally.) Suffice it to say. We sprinted to the end on this one and avoided the code review bottleneck that is required for real, production-level projects and apps.
 
-To get a look at the latest version of Matt Pocock's skills, he maintains them on his GitHub: https://github.com/mattpocock/skills. He also has a series of free and paid courses that offer, linked from his GitHub as well. I'll be continuing to work with his approach on additional personal projects, and have already had boosted success at work implementing these principles!
+To get a look at the latest version of Matt Pocock's skills, he maintains them on his GitHub: https://github.com/mattpocock/skills. He also has a series of free and paid courses that he offers, linked from his GitHub as well. I'll be continuing to work with his approach on additional personal projects, and have already had boosted success at work implementing these principles!
 
 Thanks for reading. If you stuck with me this long, I suppose I should post a link to the game so you can try it out. [It's here!](https://ttrpg.andrewantles.net/) Get in touch with me through one of my socials if you have any feedback or comments!
 
+*Thanks for reading*
+
+Andrew Antles

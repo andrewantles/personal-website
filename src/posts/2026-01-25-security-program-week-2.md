@@ -10,20 +10,20 @@ thumbnail_alt: "Blog screenshot before changes"
 Challenge and deepen my security engineering skills by deploying and running the technical components of a cyber security program on my personal network. 
 
 # Documentation
-## Tools and Implemenation Support
+## Tools and Implementation Support
 - https://learn.cisecurity.org/Essential-Cyber-Hygiene-v8.1
 
 
-# Narative
+# Narrative
 
 ## Opening
 Hello, and welcome back. Another week, another... something. Let's talk about how things went and how they are going. This post will start out as a bit of a journal entry. If you're just interested in the technical details, jump ahead to the [Blog Visual Updates](#blog-visual-updates) section.
 
 I subscribed to Claude Pro this week. I'm really excited about it. I've got Claude Code running both locally and "on the Web."
 
-I opened up several Claude Code windows and got to work, only to quickly realize, I had uninstalled XCode from my Macbook at some point, and didn't have `git` available to start branching and landing changing. I'm not going to do this if I can't stay organized. (Why did I spend an entire week identifying a framework and program structure to follow?) I've witnessed too many "programs" that feel like "shoot from the hip" judgement calls, and there's just no structure there. Too easy to introduce bias. Too easy for opinions and ideas to change from week to week. Too easy to overlook simple fundamentals. Difficult to document policies and retain "sources of truth" for future reference regarding decisions and agreements. But, I digress. 
+I opened up several Claude Code windows and got to work, only to quickly realize, I had uninstalled XCode from my Macbook at some point, and didn't have `git` available to start branching and landing changes. I'm not going to do this if I can't stay organized. (Why did I spend an entire week identifying a framework and program structure to follow?) I've witnessed too many "programs" that feel like "shoot from the hip" judgement calls, and there's just no structure there. Too easy to introduce bias. Too easy for opinions and ideas to change from week to week. Too easy to overlook simple fundamentals. Difficult to document policies and retain "sources of truth" for future reference regarding decisions and agreements. But, I digress. 
 
-So, I quickly got derailed and had to spend part of an hour troubleshooting an App Store install error. This hurt, because I was already off to a late start due to some troubleing news that affected my family and that I felt compelled to attend to. (It was the right call.) But, at this point, I have `git` installed, an SSH key with passcode, and can start pushing commits. Let's get to it!
+So, I quickly got derailed and had to spend part of an hour troubleshooting an App Store install error. This hurt, because I was already off to a late start due to some troubling news that affected my family and that I felt compelled to attend to. (It was the right call.) But, at this point, I have `git` installed, an SSH key with passcode, and can start pushing commits. Let's get to it!
 
 ## Blog Visual Updates
 My blog was in somewhat sad shape, so I spun up a Claude Code window to analyze it for problems, and I seeded it with a few of the obvious issues I was seeing. Overall I made some changes that I feel a lot more confident and proud about, including the following:
@@ -43,10 +43,10 @@ Here are a couple of screenshots showing the before and after. Much improved and
 ![Blog screenshot after changes](./2026-01-25-security-program-week-2-files/after-blog.png)
 
 ## Other Progress
-I felt it was important to refresh my blog this week, since it is the front door to this security program content that I'm putting together. That's not to say that I didn't make progress on the overall program. I made several kind of baby steps towards the overall goal, but first:
+I felt it was important to refresh my blog this week, since it is the front door to this security program content that I'm putting together. That's not to say that I didn't make progress on the overall program. I made several baby steps towards the overall goal, but first:
 
 ### Revelation (of the week?)
-I had a bit of a revelation following an on-site training at my current employer by Anthropic: *A majority of work will be flowing through agents.* It sounds like this is already happening at Anthropic - the trainer described walking through the office and seeing multiple Claude Code windows open on every workstation. And, with the beta release of Claude Cowork last week, enabling lower-barrier Claude Code-like workflows on documents, browsers, and more, I have the strong feeling that, I should get used to interacting with my technical environments via LLM tools, basically now. 
+I had a bit of a revelation following an on-site training at my current employer by Anthropic: *A majority of work will be flowing through agents.* It sounds like this is already happening at Anthropic - the trainer described walking through the office and seeing multiple Claude Code windows open on every workstation. And, with the beta release of Claude Cowork last week, enabling lower-barrier Claude Code-like workflows on documents, browsers, and more, I have the strong feeling that I should get used to interacting with my technical environments via LLM tools, basically now. 
 
 I don't ever want to forget my roots and fundamentals. I believe these are going to be even more important as we work through scores of agents, not less. We'll need to be able to jump in and play clean-up crew, much like a Staff or Principal Engineer called in to debug and resolve thorny, ambiguous problems.
 
@@ -63,20 +63,20 @@ Part of this conclusion came to me just today as I worked on:
 #### Blog CSS Styling
 Claude was moving quick and asking to make changes I didn't fully understand. If my architecture gets away from me, I could really land in trouble and make my life a lot more difficult down the road having to untangle something that me and my agents agree is spaghetti code in a domain I don't spend as much time in.
 
-I compensated by this with prompting along the lines of "slow down and describe you recommended approach to the problem, along with any alternatives you think are worth considering. For each change I need to understand what is changing, how that element works, why it needs to change, and what the expected output is." 
+I compensated for this by prompting along the lines of "slow down and describe your recommended approach to the problem, along with any alternatives you think are worth considering. For each change I need to understand what is changing, how that element works, why it needs to change, and what the expected output is." 
 
 After writing that the second time, I quickly dumped it into my `CLAUDE.md` file. It really helped keep things clear and prevented sweeping architecture changes.
 
 ### Local Agent Sandbox
 If you're running a local agent on your trusted, daily driver, sooner or later you're going to run into trouble. Either that, or you'll have to slow yourself way down to selectively approve prompts so your daily driver doesn't get wrecked.
 
-Quick plug for the [Lethal Trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) by Simon Willison. I feel like this is basically industry-standard knowledge at this point, and is a great, simplified way to enumerating agent risk.
+Quick plug for the [Lethal Trifecta](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) by Simon Willison. I feel like this is basically industry-standard knowledge at this point, and is a great, simplified way to enumerate agent risk.
 
 In the Trifecta, our host machine is our "private data," and until we can effectively cut off one of the legs of the Lethal Trifecta, we're at risk of our agents being turned against us. 
 
-To that end, Simon also recently linked to [this very informative post](https://www.luiscardoso.dev/blog/sandboxes-for-ai) by Luis Cardoso breaking down sandbox fundamentals and exactly what certain isolation paradigms do, don't do, and the performance and maintenance trade offs of eacy. I highly recommend saving a local copy for future safe keeping. Of both of these blog posts actually. 
+To that end, Simon also recently linked to [this very informative post](https://www.luiscardoso.dev/blog/sandboxes-for-ai) by Luis Cardoso breaking down sandbox fundamentals and exactly what certain isolation paradigms do, don't do, and the performance and maintenance trade offs of each. I highly recommend saving a local copy for future safe keeping. Of both of these blog posts actually. 
 
-Then, while setting up Claude Code, I read into the Claude Code [.devcontainers setup guide](https://code.claude.com/docs/en/devcontainer). Having read the article by Luis Cardosa, I was surprised to see the lack of mention of seccomp profiles, and the focus on network-only sandbox controls. Which, I suppose just makes me really thankful to have discovered Cardosa's article, because I was thinking of sandboxing primarily as a network layer control, as opposed to thinking about how the OS kernel is shared or accessed - something he calls out directly in his post! 
+Then, while setting up Claude Code, I read into the Claude Code [.devcontainers setup guide](https://code.claude.com/docs/en/devcontainer). Having read the article by Luis Cardoso, I was surprised to see the lack of mention of seccomp profiles, and the focus on network-only sandbox controls. Which, I suppose just makes me really thankful to have discovered Cardosa's article, because I was thinking of sandboxing primarily as a network layer control, as opposed to thinking about how the OS kernel is shared or accessed - something he calls out directly in his post! 
 
 So, more digging and understanding to do here to develop a robust agent sandbox solution, but sort of "ripped the bandaid off," and found some really good sources that we should be able to make something really comprehensive out of. 
 
